@@ -14,12 +14,12 @@ spring:
     hibernate:
       ddl-auto: update
 
-ai:
-  openai:
-    api-key: ${CHATGPT_API_KEY}
-    chat:
-      options:
-        model: gpt-3.5-turbo
+#ai:
+#  openai:
+#    api-key: ${CHATGPT_API_KEY}
+#    chat:
+#      options:
+#        model: gpt-3.5-turbo
 
 
 redis:
