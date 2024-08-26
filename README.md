@@ -59,6 +59,10 @@ https://how-can-i.tistory.com/127
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
+0-2. winget 설치 (window)
+
+https://www.lainyzine.com/ko/article/how-to-install-winget-on-windows-10/#winget-%EC%BB%A4%EB%A7%A8%EB%93%9C%EB%9D%BC%EC%9D%B8-%EB%AA%85%EB%A0%B9%EC%96%B4%EB%A5%BC-%EC%84%A4%EC%B9%98%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95
+
 0-3. AZD, AZ, GH 설치
 
 아래 명령어 중 자신의 컴퓨터에 맞는 명령어를 터미널에 입력합니다.
