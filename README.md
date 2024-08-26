@@ -39,20 +39,86 @@
 
 0-1. 자바 & 인텔리제이 설치
 
-0-1-1. window에서 설치
+0-1-1. window에서 자바 설치
 
 https://www.oracle.com/java/technologies/downloads/
 오라클에서
 <img width="641" alt="스크린샷 2024-08-26 오후 5 32 38" src="https://github.com/user-attachments/assets/5d168890-4318-4553-a10c-2af7a551445e">
+<br>
 자바 17을 다운받습니다.
 
-https://velog.io/@bi-sz/IntelliJ-환경-구성하기
+<img width="267" alt="스크린샷 2024-08-26 오후 5 34 09" src="https://github.com/user-attachments/assets/3d529075-92ae-4cdc-bcee-1c9bf567017f"><br>
+<img width="487" alt="스크린샷 2024-08-26 오후 5 34 31" src="https://github.com/user-attachments/assets/6327a6a4-60ad-450a-a8bc-f4dd242ce9df">
+<img width="605" alt="스크린샷 2024-08-26 오후 5 34 46" src="https://github.com/user-attachments/assets/0262ad10-129b-4555-841f-1d9bf3bbeb31">
 
-0-1-2. mac에서 설치
+변수 명에는 JAVA_HOME, 값에는 아까 JDK17을 설치한 경로를 입력합니다.
+<img width="623" alt="스크린샷 2024-08-26 오후 5 35 08" src="https://github.com/user-attachments/assets/448f180f-1cf5-42f6-81e8-ba5912231764">
 
-https://gymdev.tistory.com/72
+다음과 같이 입력합니다.
+<img width="620" alt="스크린샷 2024-08-26 오후 5 35 57" src="https://github.com/user-attachments/assets/eee7f27f-d752-4eb5-86b4-42b6ae776ac4">
 
-https://how-can-i.tistory.com/127
+시스템 변수 중, 변수가 Path인 것을 찾아 편집을 클릭합니다.
+<img width="612" alt="스크린샷 2024-08-26 오후 5 36 52" src="https://github.com/user-attachments/assets/130494f8-3e2a-4c49-bd7a-e0dd99332fd4">
+
+새로 만들기를 클릭합니다.
+<img width="538" alt="스크린샷 2024-08-26 오후 5 37 38" src="https://github.com/user-attachments/assets/5f555481-4e67-46bf-a1f9-8d7e4cd28b7d">
+
+
+입력 창에 %JAVA_HOME%\bin\ 을 입력하고 확인 버튼을 클릭합니다.
+<img width="534" alt="스크린샷 2024-08-26 오후 5 38 45" src="https://github.com/user-attachments/assets/ee163a99-49db-43fc-8728-2debad570bb6">
+
+---------
+
+0-1-2. mac에서 자바 설치
+
+오라클 홈페이지에서 맥 os 자바 17을 설치한다.
+https://www.oracle.com/java/technologies/downloads/
+
+터미널에서 아래 명령어를 차례로 입력합니다.
+```
+cd /Library/Java/JavaVirtualMachines
+
+cd jdk-17.jdk/Contents/Home/
+
+pwd
+```
+입력 후 나온 주소를 복사한다.
+
+다음 명령어를 통해 편집기를 연다. 읽기모드로 실행되므로 키보드의 i 를 눌러 INSERT 모드로 변환한 후 다음을 입력한다
+```
+vi ~/.bash_profile
+```
+
+다음 내용을 .bash_profile 에 붙여넣어 JAVA 경로를 설정한다.
+주의 ** JAVA_HOME의 값은 아까 복사한 주소이다
+```
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
+PATH=$PATH:$JAVA_HOME/bin
+export JAVA_HOME
+export PATH
+```
+
+모두 입력 후 esc를 누르고 :wq!를 입력하여 빠져나온다.
+
+다음 명령어를 입력하여 환경변수를 적용한다.
+```
+source .bash_profile
+```
+
+```
+# 환경변수 설정 확인
+echo $JAVA_HOME
+
+# 자바 버전 확인
+java -version
+```
+
+
+0-1-3. 인텔리제이 설치
+아래 링크에서 각자의 운영체제에 맞는 버전 설치
+https://www.jetbrains.com/ko-kr/idea/download/?section=mac
+
+--------
 
 0-2. brew 설치 (mac)
 
@@ -64,7 +130,8 @@ https://how-can-i.tistory.com/127
 
 0-2. winget 설치 (window)
 
-https://www.lainyzine.com/ko/article/how-to-install-winget-on-windows-10/#winget-%EC%BB%A4%EB%A7%A8%EB%93%9C%EB%9D%BC%EC%9D%B8-%EB%AA%85%EB%A0%B9%EC%96%B4%EB%A5%BC-%EC%84%A4%EC%B9%98%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95
+다음 링크에서 winget을 설치한다.
+https://apps.microsoft.com/detail/9nblggh4nns1?rtc=1&hl=ko-kr&gl=KR#activetab=pivot:overviewtab
 
 0-3. AZD, AZ, GH 설치
 
