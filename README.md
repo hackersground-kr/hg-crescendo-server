@@ -35,6 +35,7 @@
 - intelliJ
 
 - powershell, 터미널 등은 컴퓨터 내의 검색을 통해 찾을 수 있습니다.
+- 윈도우는 powershell에서 진행합니다.
 
 ## 환경 설정 - 2
 
