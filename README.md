@@ -356,6 +356,18 @@ https://portal.azure.com/#home 에 접속합니다.
 
 다시 cosmosDB - postgre로 돌아갑니다.
 
+3-1-8 ai 사용
+
+애저 포털에서 openAI 검색 및 +만들기
+이름은 아무렇게나, 지역은 korea central 선택하고 생성합니다. 
+
+3-1-8-1
+
+리소스 관리 - 키 값 및 엔드포인트에 들어가면 키가 2개가 생성된걸 확인할 수 있습니다.
+<img width="763" alt="스크린샷 2024-08-27 오전 7 16 45" src="https://github.com/user-attachments/assets/4828c264-a084-4aeb-8812-96ef0c411c3c">
+
+
+
 3-2-0. DB 연결 및 환경변수
 
 3-2-0-1. 설정 - 연결 문자열 - JDBC의 url을 ‘?’전까지만 복사합니다.
@@ -363,23 +375,15 @@ https://portal.azure.com/#home 에 접속합니다.
 ![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az9.png)
 
 
-ai 사용을 위한 방법
-
-애저 포털에서 openAI 검색 및 +만들기
-이름은 아무렇게나, 지역은 korea central 선택하고 생성합니다. 
-리소스 관리 - 키 값 및 엔드포인트에 들어가면 키가 2개가 생성된걸 확인할 수 있습니다.
-<img width="763" alt="스크린샷 2024-08-27 오전 7 16 45" src="https://github.com/user-attachments/assets/4828c264-a084-4aeb-8812-96ef0c411c3c">
 
 
+아까 만든 웹앱 소스에서 설정 -  환경변수에서 +추가를 클릭합니다.
 
-
-웹앱 소스에서 설정 -  환경변수에서 +추가를 클릭합니다.
-
-1번째 이름: DB_URL, 값: 방금 복사한 url
+1번째 이름: DB_URL, 값: 방금 복사한 데이터베이스 url
 
 2번쨰 이름: DB_PW, 값: 자신의 db 비밀번호
 
-3번째 이름: CHATGPT_API_KEY, 값: openai key 1 또는 2(선택)
+3번째 이름: CHATGPT_API_KEY, 값: openai의 key 1 또는 2(선택)
 
 이렇게 총 3개를 만들고 적용합니다.
 
