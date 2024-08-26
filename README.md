@@ -22,6 +22,7 @@
 
 ## 환경 설정 - 1
 
+
 **사전 준비 사항 목록**
 
 - GitHub Account
@@ -399,10 +400,13 @@ https://portal.azure.com/#home 에 접속합니다.
 
 3-2-4. 설정을 마쳤다면 저장을 누릅니다. 깃액션이 활성화됩니다.
 
+
+
+3-2-5-1. intellij에서 자신이 포크한 폴더 경로를 열어줍니다. (hg-crescendo-server)
+
 ![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az14.png)
 
-
-3-2-5. intelliJ에서 터미널을 열고 아래의 명령어를 입력합니다.
+3-2-5-2. intelliJ에서 터미널을 열고 아래의 명령어를 입력합니다.
 
 ```
 git pull
