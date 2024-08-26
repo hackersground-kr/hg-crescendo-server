@@ -106,11 +106,11 @@ winget install gh
 
 1-1. 우측 상단 4개의 버튼 중 3번째 버튼 Fork를 눌러 포크할 수 있습니다.
 
-![1]([https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/1de3a3a3-e14d-4867-9671-b09fcbb1037c/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_2.48.33.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az1.png))
+![1](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az1.png)
 
      1-2. 그대로 아래 creat fork을 클릭합니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/3c4afd4f-64e9-4bbe-9a37-13647fe3f237/image.png)
+![image.png](az1.png)
 
      1-3. 자신의 리포지토리로 이동합니다.
 
