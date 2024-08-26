@@ -21,7 +21,7 @@ import java.util.List;
 
 @Tag(name = "투두", description = "ToDo")
 @RestController
-@RequestMapping("/posts")
+@RequestMapping("/todos")
 @RequiredArgsConstructor
 public class TodoController {
     private final TodoService todoService;
@@ -46,7 +46,7 @@ public class TodoController {
         todoService.deleteTodo(todoId);
     }
 
-    @PostMapping("/{todoId}")
+    @PatchMapping("/{todoId}/check")
     public void checkTodo(@PathVariable Long todoId) {
         todoService.todoCheck(todoId);
     }

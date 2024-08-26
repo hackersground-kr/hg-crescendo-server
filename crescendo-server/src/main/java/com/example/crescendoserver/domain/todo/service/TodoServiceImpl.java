@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class TodoServiceImpl implements TodoService {
-    private TodoRepository todoRepository;
+    private final TodoRepository todoRepository;
     private final AuthService authService;
 
     @Override

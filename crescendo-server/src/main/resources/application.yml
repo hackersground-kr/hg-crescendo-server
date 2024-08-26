@@ -12,14 +12,12 @@ spring:
 #        dialect: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
 
-ai:
-  openai:
-    api-key: ${CHATGPT_API_KEY}
-    chat:
-      options:
-        model: gpt-3.5-turbo
+  ai:
+    openai:
+      api-key: ${CHATGPT_API_KEY}
+
 
 
 redis:
