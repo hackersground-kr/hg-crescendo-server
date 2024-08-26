@@ -109,4 +109,102 @@ winget install gh
 
 ## 시작하기
 
-> **여러분의 제품/서비스를 Microsoft 애저 클라우드에 배포하기 위한 절차를 구체적으로 나열해 주세요.**
+1. 이 리포지토리를 자신의 GitHub 계정으로 포크합니다.
+
+1-1. 우측 상단 4개의 버튼 중 3번째 버튼 Fork를 눌러 포크할 수 있습니다.
+
+![스크린샷 2024-08-26 오전 2.48.33.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/1de3a3a3-e14d-4867-9671-b09fcbb1037c/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_2.48.33.png)
+
+     1-2. 그대로 아래 creat fork을 클릭합니다.
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/3c4afd4f-64e9-4bbe-9a37-13647fe3f237/image.png)
+
+     1-3. 자신의 리포지토리로 이동합니다.
+
+2. 포크한 리포지토리에서 자신의 컴퓨터로 클론합니다.
+
+2-1. 초록색 Code를 눌러서 나온 HTTPS 링크를 복사하고,
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/06761558-9caa-4c67-9452-5f2449fc10dd/image.png)
+
+2-2. 터미널에 아래 명령어를 입력합니다.
+
+```
+git clone (복사한 url)
+```
+
+2-3. 디렉토리 이동
+
+```
+cd hg-crescendo-server
+```
+
+3. 터미널에서 아래 명령어를 입력하여 현재 리포지토리의 위치를 확인합니다
+
+```
+git remote
+```
+
+---
+
+4 아래 명령어를 차례대로 하나씩 실행시켜 Azure 및 GitHub에 로그인합니다.
+
+```
+# Azure Developer CLI login
+azd auth login
+# 성공 메시지가 나오면 창을 닫고 터미널로 돌아갑니다.
+
+# Azure CLI login
+az login
+
+# Select a subscription and tenant (Type a number or Enter for no changes):
+# 라는 출력이 나온다면 사용할 구독을 선택하고 엔터를 클릭합니다. (파란색이 선택되었다는 의미)
+# 성공 메시지가 나오면 창을 닫고 터미널로 돌아갑니다.
+
+# GitHub CLI login
+GITHUB_TOKEN=
+gh auth login
+
+# GitHub.com을 선택하고 엔터를 클릭합니다.
+# HTTPS를 선택하고 엔터를 클릭합니다.
+# y를 누르고 엔터를 클릭합니다.
+# Login with a web browser를 선택하고 엔터를 클릭합니다.
+# 4자리-4자리 코드가 나오면 복사를 하고, 엔터를 눌러 웹사이트를 엽니다.
+# 컨티뉴를 누르고, 복사한 코드를 붙여넣기 하고 컨티뉴를 누릅니다.
+# Authorize github을 클릭합니다
+# 성공 메시지가 나오면 창을 닫고 터미널로 돌아갑니다.
+```
+
+4-1. 로그인이 끝났다면 아래 명령어를 통해 제대로 로그인이 되어 있는지 확인합니다.
+
+```
+# Azure Developer CLI
+azd auth login --check-status
+
+# Azure CLI
+az account show
+
+# GitHub CLI
+gh auth status
+```
+
+5. 아래 명령어를 차례대로 하나씩 실행시켜 배포 환경을 준비합니다.
+
+```
+# mac
+AZURE_ENV_NAME="{{ GITHUB_ID }}"
+# window
+$AZURE_ENV_NAME = "{{ GITHUB_ID }}"
+
+# {{ }} 를 모두 지우고 " " 안에 자신의 깃헙 아이디를 적어주세요
+
+# 공통
+azd init -e $AZURE_ENV_NAME
+# Use code in the current directory를 선택하고 엔터를 클릭합니다.
+# Confirm and continue initializing my app를 선택하고 엔터를 클릭합니다.
+```
+
+5-1. 다음과 같은 메시지가 출력됩니다!!
+```
+SUCCESS: Your app is ready for the cloud!
+```
