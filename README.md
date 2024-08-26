@@ -368,6 +368,8 @@ ai 사용을 위한 방법
 애저 포털에서 openAI 검색 및 +만들기
 이름은 아무렇게나, 지역은 korea central 선택하고 생성합니다. 
 리소스 관리 - 키 값 및 엔드포인트에 들어가면 키가 2개가 생성된걸 확인할 수 있습니다.
+<img width="763" alt="스크린샷 2024-08-27 오전 7 16 45" src="https://github.com/user-attachments/assets/4828c264-a084-4aeb-8812-96ef0c411c3c">
+
 
 
 
