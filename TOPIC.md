@@ -1,4 +1,4 @@
-<img width="824" alt="스크린샷 2024-08-26 오전 11 32 34" src="https://github.com/user-attachments/assets/66baca18-2f41-4a9d-85d4-5f80ffbf85de"># `크레센도`팀 해커톤 주제
+`크레센도`팀 해커톤 주제
 
 ## 팀명
 
