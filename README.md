@@ -186,7 +186,7 @@ winget install -e --id GitHub.cli
 
 1. 이 리포지토리를 자신의 GitHub 계정으로 포크합니다.
 
-1-1. 우측 상단 4개의 버튼 중 3번째 버튼 Fork를 눌러 포크할 수 있습니다.
+1-1. 우측 상단 버튼 Fork를 눌러 포크할 수 있습니다.
 
 ![1](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az1.png)
 
