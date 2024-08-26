@@ -34,7 +34,7 @@
 - java 17
 - intelliJ
 
-- powershell, 프롬프트, 터미널 등은 컴퓨터 내의 검색을 통해 찾을 수 있습니다.
+- powershell, 터미널 등은 컴퓨터 내의 검색을 통해 찾을 수 있습니다.
 
 ## 환경 설정 - 2
 
@@ -139,7 +139,7 @@ https://www.jetbrains.com/ko-kr/idea/download/?section=mac
 
 다음 링크에서 winget을 설치합니다.
 https://apps.microsoft.com/detail/9nblggh4nns1?rtc=1&hl=ko-kr&gl=KR#activetab=pivot:overviewtab
-프롬프트에 winget을 입력했을 때 정보가 나온다면 설치되어있는 것입니다.
+파워셀에 winget을 입력했을 때 정보가 나온다면 설치되어있는 것입니다.
 
 0-3. AZD, AZ, GH 설치
 
@@ -202,7 +202,7 @@ winget install -e --id GitHub.cli
 
 ![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az3.png)
 
-2-2. 터미널 또는 프롬프트에 아래 명령어를 입력합니다.
+2-2. 터미널 또는 파워셀에 아래 명령어를 입력합니다.
 
 ```
 git clone (복사한 url)
@@ -268,7 +268,7 @@ gh auth status
 ```
 # mac
 AZURE_ENV_NAME="{{ GITHUB_ID }}"
-# window (** powershell)
+# window (** powershell, 띄어쓰기 주의)
 $AZURE_ENV_NAME = "{{ GITHUB_ID }}"
 
 # {{ }} 를 모두 지우고 " " 안에 자신의 깃헙 아이디를 적어주세요
