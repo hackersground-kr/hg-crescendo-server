@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./SignUp1.css";
+//import "./SignUp1.css";
 
 function Header() {
   return (
@@ -8,14 +8,15 @@ function Header() {
       <div className="line"></div>
       <div id="idBox">
         <h1>
-          회원가입을 위해
+          로그인을 위해
           <br />
-          비밀번호를 작성해주세요
+          아이디와 비밀번호를
+          <br />
+          정확하게 입력해주세요!
         </h1>
-        <div>정확한 확인을 위해 인증도 진행해 주세요</div>
-        <input id="inputPwd" type="text" placeholder="비밀번호 입력" />
+        <input id="inputId" type="text" placeholder="아이디 입력" />
         <br />
-        <input id="inputRePwd" type="text" placeholder="비밀번호 확인 입력" />
+        <input id="inputPwd" type="text" placeholder="비밀번호 확인 입력" />
       </div>
     </header>
   );
@@ -26,8 +27,12 @@ function Button() {
 
   return (
     <div>
-      <input id="prevBtn" type="button" onClick={() => navigate(-1)} />
-      <input id="nextBtn" type="button" onClick={() => navigate("/signup3")} />
+      <input
+        id="prevBtn"
+        type="button"
+        onClick={() => navigate(-1)}
+      />
+      <input id="nextBtn" type="button" />
       <input id="helpBtn" type="button" />
     </div>
   );

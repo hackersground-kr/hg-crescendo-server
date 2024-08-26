@@ -40,10 +40,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: cover;
+  background-size: contain;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
   background-image: url("./image/goBack.png");
   border: none;
-  border-radius: 50%; /* 원형 버튼 */
   cursor: pointer;
 }
 
@@ -56,8 +57,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #895d3c; /* 배경색 (원하는 색상으로 변경 가능) */
-  color: white;
+  background-size: cover;
+  background-image: url("./image/help.png");
   border: none;
   border-radius: 50%; /* 원형 버튼 */
   cursor: pointer;
@@ -78,10 +79,32 @@ h1 {
   padding: 0;
 }
 
-input#inputId {
+#inputId {
   border: none;
   border-bottom: 2px solid #895d3c;
   margin-top: 6rem;
+  padding: 0.5rem;
+  font-size: 16px;
+  background-color: #f8f4f3;
+  color: #eaddd8;
+  outline: none;
+}
+
+#inputPwd {
+  border: none;
+  border-bottom: 2px solid #895d3c;
+  margin-top: 6rem;
+  padding: 0.5rem;
+  font-size: 16px;
+  background-color: #f8f4f3;
+  color: #eaddd8;
+  outline: none;
+}
+
+#inputRePwd {
+  border: none;
+  border-bottom: 2px solid #895d3c;
+  margin-top: 1rem;
   padding: 0.5rem;
   font-size: 16px;
   background-color: #f8f4f3;
