@@ -41,7 +41,10 @@
 
 0-1-1. window에서 설치
 
-https://nazzang19.tistory.com/127
+https://www.oracle.com/java/technologies/downloads/
+오라클에서
+<img width="641" alt="스크린샷 2024-08-26 오후 5 32 38" src="https://github.com/user-attachments/assets/5d168890-4318-4553-a10c-2af7a551445e">
+자바 17을 다운받습니다.
 
 https://velog.io/@bi-sz/IntelliJ-환경-구성하기
 
