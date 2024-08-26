@@ -204,7 +204,223 @@ azd init -e $AZURE_ENV_NAME
 # Confirm and continue initializing my app를 선택하고 엔터를 클릭합니다.
 ```
 
+
+
 5-1. 다음과 같은 메시지가 출력됩니다!!
 ```
 SUCCESS: Your app is ready for the cloud!
 ```
+
+
+## 환경설정 끝났다면
+
+https://portal.azure.com/#home 에 접속합니다.
+
+1. DB 생성하기
+
+![스크린샷 2024-08-26 오전 3.42.43.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/4897675e-b687-4cec-809e-4044e70d7a70/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_3.42.43.png)
+
+1-1. Cosmos DB를 검색합니다.
+
+1-2. Others 에 PostgreSQL 을 선택합니다. (만들기 클릭)
+
+![스크린샷 2024-08-26 오전 3.36.50.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/46e2bf0d-c3a9-47e3-9eed-fc39e79e8967/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_3.36.50.png)
+
+1-3-1. 할당된 리소스 그룹을 선택합니다.
+
+1-3-2. 데이터베이스 이름을 설정합니다.
+
+1-3-3. 위치는 Korea Central (한국 중부) 를 선택합니다.
+
+1-3-4. postgreSQL 16버전을 선택합니다.
+
+1-3-5. 데이터베이스에 사용할 password를 입력합니다. (까먹지 마세요)
+
+** db네임은 변경하지 않습니다. (citus)
+
+1-3-6. 네트워킹으로 넘어갑니다
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/fb7b9373-653a-4bb1-978c-bf5b5bb3fe84/image.png)
+
+1-4. 다음 버튼을 클릭하여 네트워킹 아이피 전체허용을 해줍니다.
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/491ea702-5d2f-4eaa-b4e5-22060d32febb/image.png)
+
+1-5. 만듭니다.
+
+![스크린샷 2024-08-26 오전 4.06.28.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/ef6abaa6-656d-469d-b19b-89880b12695a/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_4.06.28.png)
+
+2. DB 연결하기
+
+2-1. 설정 - 연결 문자열 - JDBC의 url을 ‘?’전까지만 복사합니다.
+
+![스크린샷 2024-08-26 오전 4.30.42.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/c7739a38-7bed-4b44-a214-1a161db3e8a5/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_4.30.42.png)
+
+2-2. intelliJ 로 클론해온 프로젝트를 (hg-crescendo-server)를 엽니다.
+
+2-2-1. crescendo-server/src/main/resources/yml 파일의 ${DB_URL} 을 지우고 방금 복사한 url을 붙여넣습니다.
+
+2-2-2. 같은 파일의 ${DB_PW}를 지우고 자신의 database 비밀번호를 적습니다. (틀리면 오류나요)
+
+2-3. github 커밋하기
+
+2-3-1. 아래 터미널 창을 엽니다
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/d06bfc9c-2320-471b-adbb-c857cdf5a76e/image.png)
+
+2-3-2. 다음 명령어를 차례로 입력합니다.
+
+```
+git add .
+git commit -m "edit yml"
+git push
+```
+
+---
+
+이제 얼마 안 남았어요!!
+
+다시 azure portal로 돌아갑니다.
+
+![스크린샷 2024-08-26 오전 3.42.43.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/4897675e-b687-4cec-809e-4044e70d7a70/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_3.42.43.png)
+
+3. 서버 배포하기 + 깃 액션 적용하기
+
+3-1. 리소스 만들기
+
+3-1-1. app service를 검색합니다.
+
+3-1-2. 만들기 → 웹앱
+
+3-1-3. 할당된 리소스 그룹을 선택합니다
+
+3-1-4. 고유한 호스트 이름(서버의 도메인 주소)를 설정할 수 있습니다. (선택사항, 필수 X, 만약 켠다면 도메인 이름이 복잡해집니다.)
+
+3-1-5. 코드 → 자바 17 → java SE 그리고 korea Central을 선택합니다.
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/f6d9e41b-5b7c-491d-bfac-8c5230ef508f/image.png)
+
+3-1-6. 네트워킹이 만약 이렇게 설정되어있지 않다면 아래와 같이 설정합니다.
+
+![스크린샷 2024-08-26 오전 5.01.52.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/633aae5d-6a04-461a-ab6d-c1f05b1fd03b/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_5.01.52.png)
+
+3-1-7. 검토 및 만들기를 합니다.
+
+3-2. git Actions 설정하기
+
+3-2-1. 배포 → 배포 센터에 들어갑니다
+
+3-2-2. 소스 : GitHub
+
+3-2-3. 포크해온 리포지토리와 main 분기를 선택합니다
+
+3-2-4. 설정을 마쳤다면 저장을 누릅니다. 깃액션이 활성화됩니다.
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/626505a7-b234-4550-9694-e04ff7ef6c22/image.png)
+
+하지만 
+
+![스크린샷 2024-08-26 오전 5.26.39.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/c70cb6fe-ef42-4112-8915-4077b41431bf/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_5.26.39.png)
+
+로그에 들어가보면 실패라고 나올 겁니다.
+
+3-2-5. intelliJ에서 터미널을 열고 아래의 명령어를 입력합니다.
+
+git pull
+
+3-2-6. .github/workflows 폴더에 yml파일이 두개가 생길텐데 원래 있던 파일을 삭제합니다.
+
+3-2-7. 새로 생긴 yml 파일에 내용을 다음과 같이 변경합니다. 복사 붙여넣기를 하셔도 괜찮습니다. 
+
+단 ** 주의할 점
+
+1. 가장 아래에서 2번째에 app-name 은 당신의 웹앱 리소스 네임으로 변경하셔야합니다. 
+2. client-id, tanant-id, subscription-id는 자신이 발급받은 키를 쓰셔야 합니다. 이전 파일 지웠어도 commit 기록 보면 찾을 수 있어요
+
+```
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and deploy WAR app to Azure Web App - sh-study-azure
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Java version
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'microsoft'
+
+      - name: Build with Gradle
+        run: |
+          cd crescendo-server
+          ./gradlew bootJar
+
+      - name: check build completed
+        run: ls -al crescendo-server/build/libs
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v4
+        with:
+          name: java-app
+          path: 'crescendo-server/build/libs/crescendo-server-0.0.1-SNAPSHOT.jar'
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: 'Production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    permissions:
+      id-token: write #This is required for requesting the JWT
+
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v4
+        with:
+          name: java-app
+
+      - name: Check Download Complete
+        run: ls -al
+
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_yourKey }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_yourKey }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_yourKey }}
+
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: 'sh-crescendo-server'
+          package: 'crescendo-server-0.0.1-SNAPSHOT.jar'
+```
+
+3-2-8. 모두 변경했다면 다음 명령어를 차례대로 하나씩 실행합니다.
+
+```
+git add .
+git commit -m "edit yml2"
+git push
+```
+
+배포 완료 후 확인 방법
+
+CI/CD 로그에 앱 서비스 링크 혹은
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/05aac857-8183-4d35-9566-f16f7695158a/image.png)
+
+배포한 웹앱 소스에 도메인을 통해 확인할 수 있다.
