@@ -241,13 +241,13 @@ https://portal.azure.com/#home 에 접속합니다.
 
 1-5. 만듭니다.
 
-![스크린샷 2024-08-26 오전 4.06.28.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/ef6abaa6-656d-469d-b19b-89880b12695a/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_4.06.28.png)
+![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az8.png)
 
 2. DB 연결하기
 
 2-1. 설정 - 연결 문자열 - JDBC의 url을 ‘?’전까지만 복사합니다.
 
-![스크린샷 2024-08-26 오전 4.30.42.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/c7739a38-7bed-4b44-a214-1a161db3e8a5/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_4.30.42.png)
+![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az9.png))
 
 2-2. intelliJ 로 클론해온 프로젝트를 (hg-crescendo-server)를 엽니다.
 
@@ -259,7 +259,7 @@ https://portal.azure.com/#home 에 접속합니다.
 
 2-3-1. 아래 터미널 창을 엽니다
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/d06bfc9c-2320-471b-adbb-c857cdf5a76e/image.png)
+![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az10.png)
 
 2-3-2. 다음 명령어를 차례로 입력합니다.
 
@@ -275,7 +275,7 @@ git push
 
 다시 azure portal로 돌아갑니다.
 
-![스크린샷 2024-08-26 오전 3.42.43.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/4897675e-b687-4cec-809e-4044e70d7a70/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_3.42.43.png)
+![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az11.png))
 
 3. 서버 배포하기 + 깃 액션 적용하기
 
@@ -291,11 +291,11 @@ git push
 
 3-1-5. 코드 → 자바 17 → java SE 그리고 korea Central을 선택합니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/f6d9e41b-5b7c-491d-bfac-8c5230ef508f/image.png)
+![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az12.png)
 
 3-1-6. 네트워킹이 만약 이렇게 설정되어있지 않다면 아래와 같이 설정합니다.
 
-![스크린샷 2024-08-26 오전 5.01.52.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/633aae5d-6a04-461a-ab6d-c1f05b1fd03b/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_5.01.52.png)
+![pn](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az13.png)
 
 3-1-7. 검토 및 만들기를 합니다.
 
@@ -309,11 +309,11 @@ git push
 
 3-2-4. 설정을 마쳤다면 저장을 누릅니다. 깃액션이 활성화됩니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/626505a7-b234-4550-9694-e04ff7ef6c22/image.png)
+![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az14.png)
 
 하지만 
 
-![스크린샷 2024-08-26 오전 5.26.39.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/c70cb6fe-ef42-4112-8915-4077b41431bf/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_5.26.39.png)
+![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az15.png)
 
 로그에 들어가보면 실패라고 나올 겁니다.
 
