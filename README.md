@@ -280,7 +280,7 @@ azd init -e $AZURE_ENV_NAME
 
 
 
-5-1. 다음과 같은 메시지가 출력됩니다!!
+5-1. 다음과 같은 메시지가 출력됩니다
 ```
 SUCCESS: Your app is ready for the cloud!
 ```
