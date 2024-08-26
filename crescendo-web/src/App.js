@@ -11,6 +11,10 @@ import SignUp1 from "./SignUp1";
 import SignUp2 from "./SignUp2";
 import SignUp3 from "./SignUp3";
 import Login from "./Login";
+import Main from "./pages/Main";
+import Guide from "./pages/Guide";
+import Counsel from "./pages/Counsel";
+import Board from "./pages/Board";
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -61,6 +65,10 @@ const App = () => {
         <Route path="/signup2" element={<SignUp2 />} />
         <Route path="/signup3" element={<SignUp3 />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/Main" element={<Main/>}/>
+        <Route path="/Guide" element={<Guide/>}/>
+        <Route path="/Counsel" element={<Counsel/>}/>
+        <Route path="/Board" element={<Board/>}/>
       </Routes>
     </>
   );
