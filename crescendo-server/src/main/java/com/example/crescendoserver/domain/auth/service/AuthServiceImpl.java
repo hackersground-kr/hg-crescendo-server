@@ -98,4 +98,13 @@ public class AuthServiceImpl implements AuthService {
 
         return new UserResponse(user.getId(), user.getUsername(), user.getRole());
     }
+
+    @Override
+    public User getUser() {
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+
+        return userRepository.findByUsername(username)
+                .orElseThrow(() -> new CustomException(CustomErrorCode.USER_NOT_FOUND));
+    }
 }
+
