@@ -25,14 +25,16 @@ function Toggles() {
 
 function Counsel() {
   return (
-    <header>
+    <div>
       <div className="box"></div>
+      <img id="var" src={require("../image/var.png")} width="440px" />
       <div id="couple">
-        <input id="userBtn" type="button" />
-        <input id="counselorBtn" type="button" />
+        <input id="userBtn" type="button" value="유저" />
+        <input id="counselorBtn" type="button" value="상담사" />
       </div>
+      <img id="banner" src={require("../image/banner.png")} width="440px" />
       <Toggles />
-    </header>
+    </div>
   );
 }
 

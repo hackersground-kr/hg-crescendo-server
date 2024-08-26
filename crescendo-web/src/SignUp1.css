@@ -76,12 +76,15 @@ header {
 
 #idBox {
   margin-bottom: 6rem;
+  position: relative;
+  top: 15%;
+  right: 6%;
 }
 
 #inputId {
   border: none;
   border-bottom: 2px solid #895d3c;
-  width: 90%;
+  width: 80%;
   font-size: 20px;
   margin-bottom: 1rem;
   background-color: #f8f4f3;
@@ -92,7 +95,7 @@ header {
 #inputPwd {
   border: none;
   border-bottom: 2px solid #895d3c;
-  width: 90%;
+  width: 80%;
   font-size: 20px;
   background-color: #f8f4f3;
   color: #eaddd8;
@@ -103,7 +106,7 @@ header {
   border: none;
   margin-top: 1rem;
   border-bottom: 2px solid #895d3c;
-  width: 90%;
+  width: 80%;
   font-size: 20px;
   background-color: #f8f4f3;
   color: #eaddd8;
@@ -147,4 +150,35 @@ header {
   left: 50%; /* 화면의 가로 중앙에 위치 */
   bottom: 4rem; /* 화면 하단에서 2rem 위에 위치 */
   transform: translateX(-50%); /* 가로 중앙 정렬 */
+}
+
+h1 {
+  color: #714c1f;
+  font-size: 1.6rem;
+}
+
+h2 {
+  color: #714c2f;
+}
+
+#idBox div {
+  color: #895d3c;
+}
+
+input::placeholder {
+  color: #eaddd8;
+  font-weight: bold;
+}
+
+.checkSet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 9rem;
+}
+
+.signUp2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

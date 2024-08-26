@@ -4,11 +4,11 @@ import "./SignUp1.css";
 
 function Header() {
   return (
-    <header>
+    <header className="checkSet">
       <div className="line"></div>
       <img src={require("./image/check.png")} className="check" alt="check" />
-      <div ie="inBox">
-        <h1>flower님, 반가워요!</h1>
+      <div id="inBox">
+        <h1 id="signUp3">flower님, 반가워요!</h1>
         <h2>해바라기를 시작해볼까요?</h2>
       </div>
     </header>
