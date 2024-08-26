@@ -1,5 +1,11 @@
 .box {
-    background-color: #895D3C;
-    width: 100%;
-    height: 15px;
-  }
+  background-color: #895d3c;
+  width: 100%;
+  height: 15px;
+  margin-bottom: 10px;
+}
+
+.toggle {
+  display: flex;
+  width: 100%;
+}

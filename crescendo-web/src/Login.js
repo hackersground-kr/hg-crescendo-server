@@ -29,7 +29,12 @@ function Button() {
   return (
     <div className="btns">
       <input id="prevBtn" type="button" onClick={() => navigate(-1)} />
-      <input id="login" type="button" value="로그인" />
+      <input
+        id="login"
+        type="button"
+        value="로그인"
+        onClick={() => navigate("/main")}
+      />
       <input id="helpBtn" type="button" />
     </div>
   );

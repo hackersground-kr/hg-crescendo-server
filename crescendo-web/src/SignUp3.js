@@ -25,7 +25,7 @@ function Button() {
         id="startBtn"
         type="button"
         value="시작하기"
-        onClick={() => navigate("/app")}
+        onClick={() => navigate("/")}
       />
       <input id="helpBtn" type="button" />
     </div>

@@ -65,10 +65,10 @@ const App = () => {
         <Route path="/signup2" element={<SignUp2 />} />
         <Route path="/signup3" element={<SignUp3 />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/Main" element={<Main/>}/>
-        <Route path="/Guide" element={<Guide/>}/>
-        <Route path="/Counsel" element={<Counsel/>}/>
-        <Route path="/Board" element={<Board/>}/>
+        <Route path="/main" element={<Main />} />
+        <Route path="/Guide" element={<Guide />} />
+        <Route path="/Counsel" element={<Counsel />} />
+        <Route path="/Board" element={<Board />} />
       </Routes>
     </>
   );
