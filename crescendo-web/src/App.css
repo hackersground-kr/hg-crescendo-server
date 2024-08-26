@@ -12,7 +12,7 @@
   }
 
   .box {
-    background-color: #895D3C;
+    background-color: #895d3c;
     width: 100%;
     height: 15px;
   }
@@ -27,22 +27,24 @@
 
   .button1 {
     color: #523522;
-    background-color: #FFDA2D;
+    background-color: #ffda2d;
     width: 337px;
     height: 62px;
     text-align: center;
     border: none;
+    font-weight: bold;
     font-size: 16px; /* 버튼 텍스트 크기 */
     margin-top: 20px; /* 버튼과 상단 요소 간의 여백 추가 */
     border-radius: 20px;
   }
   .button2 {
-    color: #895D3C;
+    color: #895d3c;
     background-color: white;
     width: 337px;
     height: 62px;
     text-align: center;
-    border: solid 1px #895D3C;
+    font-weight: bold;
+    border: solid 1px #895d3c;
     font-size: 16px; /* 버튼 텍스트 크기 */
     margin-top: 20px; /* 버튼과 상단 요소 간의 여백 추가 */
     border-radius: 20px;

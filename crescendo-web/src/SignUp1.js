@@ -13,8 +13,9 @@ function Header() {
           당신의 이름을 알려주세요
         </h1>
         <div>로그인시 사용할 아이디에요</div>
-        <input id="inputId" type="text" placeholder="아이디 입력" />
       </div>
+
+      <input id="inputId" type="text" placeholder="아이디 입력" />
     </header>
   );
 }

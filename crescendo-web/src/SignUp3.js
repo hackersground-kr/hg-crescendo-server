@@ -1,13 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-//import "./SignUp1.css";
+import "./SignUp1.css";
 
 function Header() {
   return (
     <header>
       <div className="line"></div>
       <img src={require("./image/check.png")} className="check" alt="check" />
-      <div className="textArea">
+      <div ie="inBox">
         <h1>flower님, 반가워요!</h1>
         <h2>해바라기를 시작해볼까요?</h2>
       </div>
@@ -21,7 +21,12 @@ function Button() {
   return (
     <div>
       <input id="prevBtn" type="button" onClick={() => navigate(-1)} />
-      <input id="startBtn" type="button" onClick={() => navigate("/app")} />
+      <input
+        id="startBtn"
+        type="button"
+        value="시작하기"
+        onClick={() => navigate("/app")}
+      />
       <input id="helpBtn" type="button" />
     </div>
   );

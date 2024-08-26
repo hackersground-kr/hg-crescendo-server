@@ -13,10 +13,11 @@ function Header() {
           비밀번호를 작성해주세요
         </h1>
         <div>정확한 확인을 위해 인증도 진행해 주세요</div>
-        <input id="inputPwd" type="text" placeholder="비밀번호 입력" />
-        <br />
-        <input id="inputRePwd" type="text" placeholder="비밀번호 확인 입력" />
       </div>
+
+      <input id="inputPwd" type="text" placeholder="비밀번호 입력" />
+      <br />
+      <input id="inputRePwd" type="text" placeholder="비밀번호 확인 입력" />
     </header>
   );
 }

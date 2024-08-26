@@ -74,17 +74,16 @@ header {
   box-sizing: border-box;
 }
 
-h1 {
-  margin-bottom: 0;
-  padding: 0;
+#idBox {
+  margin-bottom: 6rem;
 }
 
 #inputId {
   border: none;
   border-bottom: 2px solid #895d3c;
-  margin-top: 6rem;
-  padding: 0.5rem;
-  font-size: 16px;
+  width: 90%;
+  font-size: 20px;
+  margin-bottom: 1rem;
   background-color: #f8f4f3;
   color: #eaddd8;
   outline: none;
@@ -93,9 +92,8 @@ h1 {
 #inputPwd {
   border: none;
   border-bottom: 2px solid #895d3c;
-  margin-top: 6rem;
-  padding: 0.5rem;
-  font-size: 16px;
+  width: 90%;
+  font-size: 20px;
   background-color: #f8f4f3;
   color: #eaddd8;
   outline: none;
@@ -103,11 +101,50 @@ h1 {
 
 #inputRePwd {
   border: none;
-  border-bottom: 2px solid #895d3c;
   margin-top: 1rem;
-  padding: 0.5rem;
-  font-size: 16px;
+  border-bottom: 2px solid #895d3c;
+  width: 90%;
+  font-size: 20px;
   background-color: #f8f4f3;
   color: #eaddd8;
   outline: none;
+}
+
+#startBtn {
+  color: #523522;
+  background-color: #ffda2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 337px;
+  height: 62px;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  font-size: 16px; /* 버튼 텍스트 크기 */
+  margin-top: 20px; /* 버튼과 상단 요소 간의 여백 추가 */
+  border-radius: 20px;
+
+  position: fixed; /* 화면에 고정 */
+  left: 50%; /* 화면의 가로 중앙에 위치 */
+  bottom: 4rem; /* 화면 하단에서 2rem 위에 위치 */
+  transform: translateX(-50%); /* 가로 중앙 정렬 */
+}
+
+#login {
+  color: #523522;
+  background-color: #ffda2d;
+  width: 337px;
+  height: 62px;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  font-size: 16px; /* 버튼 텍스트 크기 */
+  margin-top: 20px; /* 버튼과 상단 요소 간의 여백 추가 */
+  border-radius: 20px;
+
+  position: fixed; /* 화면에 고정 */
+  left: 50%; /* 화면의 가로 중앙에 위치 */
+  bottom: 4rem; /* 화면 하단에서 2rem 위에 위치 */
+  transform: translateX(-50%); /* 가로 중앙 정렬 */
 }
