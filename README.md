@@ -33,6 +33,8 @@
 - java 17
 - intelliJ
 
+- powershell, 프롬프트, 터미널 등은 컴퓨터 내의 검색을 통해 찾을 수 있습니다.
+
 ## 환경 설정 - 2
 
 0. 환경 설정
@@ -45,13 +47,13 @@ https://www.oracle.com/java/technologies/downloads/
 오라클에서
 <img width="641" alt="스크린샷 2024-08-26 오후 5 32 38" src="https://github.com/user-attachments/assets/5d168890-4318-4553-a10c-2af7a551445e">
 <br>
-자바 17을 다운받습니다.
+자바 17을 다운받습니다. 설치할 때는 따로 설정할 내용을 없습니다.
 
 <img width="267" alt="스크린샷 2024-08-26 오후 5 34 09" src="https://github.com/user-attachments/assets/3d529075-92ae-4cdc-bcee-1c9bf567017f"><br>
 <img width="487" alt="스크린샷 2024-08-26 오후 5 34 31" src="https://github.com/user-attachments/assets/6327a6a4-60ad-450a-a8bc-f4dd242ce9df"><br>
 <img width="605" alt="스크린샷 2024-08-26 오후 5 34 46" src="https://github.com/user-attachments/assets/0262ad10-129b-4555-841f-1d9bf3bbeb31"><br>
 
-변수 명에는 JAVA_HOME, 값에는 아까 JDK17을 설치한 경로를 입력합니다.
+변수 명에는 JAVA_HOME, 값에는 아까 JDK17을 설치한 경로를 입력합니다. 사진과 같이 입력하면 됩니다.
 <img width="623" alt="스크린샷 2024-08-26 오후 5 35 08" src="https://github.com/user-attachments/assets/448f180f-1cf5-42f6-81e8-ba5912231764"><br>
 
 다음과 같이 입력합니다.
@@ -118,6 +120,10 @@ java -version
 아래 링크에서 각자의 운영체제에 맞는 버전 설치
 https://www.jetbrains.com/ko-kr/idea/download/?section=mac
 
+
+윈도우서 다운로드할 때 설정입니다.
+<img width="489" alt="스크린샷 2024-08-27 오전 5 49 44" src="https://github.com/user-attachments/assets/ec453e0e-c33e-417a-b02a-f36b8e2bc13a">
+
 --------
 
 0-2. brew 설치 (mac)
@@ -130,8 +136,9 @@ https://www.jetbrains.com/ko-kr/idea/download/?section=mac
 
 0-2. winget 설치 (window)
 
-다음 링크에서 winget을 설치한다.
+다음 링크에서 winget을 설치합니다.
 https://apps.microsoft.com/detail/9nblggh4nns1?rtc=1&hl=ko-kr&gl=KR#activetab=pivot:overviewtab
+프롬프트에 winget을 입력했을 때 정보가 나온다면 설치되어있는 것입니다.
 
 0-3. AZD, AZ, GH 설치
 
@@ -157,8 +164,8 @@ brew update && brew install azure-cli
 ```
 
 ```
-# 윈도우 powershell
-$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item .\AzureCLI.msi
+# 윈도우
+winget install -e --id Microsoft.AzureCLI
 ```
 
 0-3-3. GH CLI
@@ -170,7 +177,7 @@ brew install gh
 
 ```
 # 윈도우
-winget install gh
+winget install -e --id GitHub.cli
 ```
 
 
@@ -194,7 +201,7 @@ winget install gh
 
 ![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az3.png)
 
-2-2. 터미널에 아래 명령어를 입력합니다.
+2-2. 터미널 또는 프롬프트에 아래 명령어를 입력합니다.
 
 ```
 git clone (복사한 url)
@@ -321,8 +328,6 @@ https://portal.azure.com/#home 에 접속합니다.
 ---
 
 
-이제 얼마 안 남았어요!!
-
 다시 azure portal로 돌아갑니다.
 
 ![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az11.png))
@@ -379,9 +384,6 @@ https://portal.azure.com/#home 에 접속합니다.
 
 ![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az14.png)
 
-하지만 
-
-로그에 들어가보면 실패라고 나올 겁니다.
 
 3-2-5. intelliJ에서 터미널을 열고 아래의 명령어를 입력합니다.
 
@@ -389,14 +391,14 @@ https://portal.azure.com/#home 에 접속합니다.
 git pull
 ```
 
-3-2-6. .github/workflows 폴더에 yml파일이 두개가 생길텐데 원래 있던 파일을 삭제합니다.
+3-2-6. .github/workflows 폴더에 yml파일이 두개가 있습니다. 원래 있던 파일을 삭제합니다.
 
 3-2-7. 새로 생긴 yml 파일에 내용을 다음과 같이 변경합니다. 복사 붙여넣기를 하셔도 괜찮습니다. 
 
 단 ** 주의할 점
 
 1. 가장 아래에서 2번째에 app-name 은 당신의 웹앱 리소스 네임으로 변경하셔야합니다. 
-2. client-id, tanant-id, subscription-id는 자신이 발급받은 키를 쓰셔야 합니다. 이전 파일 지웠어도 commit 기록 보면 찾을 수 있어요
+2. client-id, tanant-id, subscription-id는 자신이 발급받은 키를 쓰셔야 합니다. 이전 파일 지웠어도 깃허브 commit 기록 보면 찾을 수 있습니다.
 
 ```
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
@@ -484,5 +486,5 @@ CI/CD 로그에 앱 서비스 링크 혹은
 
 ![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az15.png)
 
-배포한 웹앱 소스에 도메인을 통해 확인할 수 있다.
+배포한 웹앱 소스에 도메인을 통해 확인할 수 있습니다.
 ![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az16.png)
