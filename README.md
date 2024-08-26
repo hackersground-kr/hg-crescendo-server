@@ -281,7 +281,7 @@ https://portal.azure.com/#home 에 접속합니다.
 
 3-2-0-1. 설정 - 연결 문자열 - JDBC의 url을 ‘?’전까지만 복사합니다.
 
-![스크린샷 2024-08-26 오전 4.30.42.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/c7739a38-7bed-4b44-a214-1a161db3e8a5/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_4.30.42.png)
+![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az9.png)
 
 웹앱 소스에서 설정 -  환경변수에서 +추가를 클릭합니다.
 
