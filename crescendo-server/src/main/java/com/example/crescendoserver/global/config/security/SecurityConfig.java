@@ -54,6 +54,12 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/ws/chat").permitAll()
                         .requestMatchers(HttpMethod.POST, "/chat").permitAll()
                         .requestMatchers(HttpMethod.GET, "/chat").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/todos/{todoId}").authenticated()
+                        .requestMatchers(HttpMethod.GET, "/todos").authenticated()
+                        .requestMatchers(HttpMethod.POST, "/todos").authenticated()
+                        .requestMatchers(HttpMethod.PATCH, "/todos/{todoId}/check").authenticated()
+                        .requestMatchers(HttpMethod.PATCH, "/todos/{todoId}").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/todos/{todoId}").authenticated()
                 )
 
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
