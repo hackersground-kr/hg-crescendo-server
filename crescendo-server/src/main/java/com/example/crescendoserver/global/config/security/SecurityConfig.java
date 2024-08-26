@@ -1,5 +1,9 @@
 package com.example.crescendoserver.global.config.security;
 
+import com.example.crescendoserver.global.security.jwt.filter.JwtAuthenticationFilter;
+import com.example.crescendoserver.global.security.jwt.filter.JwtExceptionFilter;
+import com.example.crescendoserver.global.security.jwt.handler.JwtAccessDeniedHandler;
+import com.example.crescendoserver.global.security.jwt.handler.JwtAuthenticationEntryPoint;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,10 +20,10 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @RequiredArgsConstructor
 @EnableWebSecurity
 public class SecurityConfig {
-//    private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
-//    private final JwtAccessDeniedHandler jwtAccessDeniedHandler;
-//    private final JwtAuthenticationFilter jwtAuthenticationFilter;
-//    private final JwtExceptionFilter jwtExceptionFilter;
+    private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
+    private final JwtAccessDeniedHandler jwtAccessDeniedHandler;
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;
+    private final JwtExceptionFilter jwtExceptionFilter;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -36,10 +40,10 @@ public class SecurityConfig {
                 .rememberMe(AbstractHttpConfigurer::disable)
                 .logout(AbstractHttpConfigurer::disable)
 
-//                .exceptionHandling((configurer) -> configurer
-//                        .accessDeniedHandler(jwtAccessDeniedHandler)
-//                        .authenticationEntryPoint(jwtAuthenticationEntryPoint)
-//                )
+                .exceptionHandling((configurer) -> configurer
+                        .accessDeniedHandler(jwtAccessDeniedHandler)
+                        .authenticationEntryPoint(jwtAuthenticationEntryPoint)
+                )
 
                 .authorizeHttpRequests((configurer) -> configurer
                         .requestMatchers(HttpMethod.POST, "/auth/signup", "/auth/login", "/auth/reissue").anonymous()
@@ -52,8 +56,8 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/chat").permitAll()
                 )
 
-//                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
-//                .addFilterBefore(jwtExceptionFilter, JwtAuthenticationFilter.class)
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(jwtExceptionFilter, JwtAuthenticationFilter.class)
                 .build();
     }
 }
