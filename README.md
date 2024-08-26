@@ -237,7 +237,7 @@ az login
 # 성공 메시지가 나오면 창을 닫고 터미널로 돌아갑니다.
 
 # GitHub CLI login
-GITHUB_TOKEN=
+# GITHUB_TOKEN=
 gh auth login
 
 # GitHub.com을 선택하고 엔터를 클릭합니다.
