@@ -1,5 +1,51 @@
 .box {
-    background-color: #895D3C;
-    width: 100%;
-    height: 15px;
+  background-color: #895d3c;
+  width: 100%;
+  height: 1px;
+}
+
+.whatDo id {
+  font-size: 20px;
+  color: #523522;
+  font-weight: bold;
+  margin-bottom: 6rem;
+}
+
+.whatDo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  gap: 20px; /* Space between buttons */
+  width: 100%; /* Allow the grid to take full width of its container */
+  max-width: 600px; /* Limit the maximum width */
+  margin: 20px 0; /* Add vertical spacing */
+}
+
+.whatDo input[type="button"] {
+  width: 100%;
+  padding: 20 px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-sizing: border-box;
+}
+
+.whatDo input[type="button"]:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.whatDo input[type="button"]:active {
+  background-color: #d0d0d0;
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .whatDo {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    grid-template-rows: repeat(3, 1fr); /* 3 rows */
   }
+}

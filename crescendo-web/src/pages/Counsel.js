@@ -27,12 +27,21 @@ function Counsel() {
   return (
     <div>
       <div className="box"></div>
-      <img id="var" src={require("../image/var.png")} width="440px" />
+      <div className="image-container">
+        <img src={require("../image/var.png")} width="440px" alt="var" />
+      </div>
       <div id="couple">
         <input id="userBtn" type="button" value="유저" />
         <input id="counselorBtn" type="button" value="상담사" />
       </div>
-      <img id="banner" src={require("../image/banner.png")} width="440px" />
+      <div className="var-container">
+        <img id="banner" src={require("../image/banner.png")} width="440px" />
+      </div>
+      <div className="chatList">
+        <input id="user1" type="button" />
+        <input id="chatBot" type="button" />
+        <input id="user2" type="button" />
+      </div>
       <Toggles />
     </div>
   );

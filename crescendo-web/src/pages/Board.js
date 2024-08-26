@@ -27,7 +27,9 @@ function Board() {
   return (
     <div>
       <div className="box"></div>
-      <img src={require("../image/var.png")} width="440px" />
+      <div className="image-container">
+        <img src={require("../image/var.png")} width="440px" alt="var" />
+      </div>
       <Toggles />
     </div>
   );
