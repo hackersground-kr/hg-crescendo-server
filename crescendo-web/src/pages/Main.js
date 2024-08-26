@@ -30,15 +30,13 @@ function Main() {
       <img src={require("../image/var.png")} width="440px" />
       <input className="text"></input>
       <h4>오늘의 추천 Todo 🔥</h4>
-      <div className="Todo"></div>
+      <img src={require("../image/onedayClass.png")} className="Todo"/>
       <h5>My Todo</h5>
       <div className="underline"></div>
       <div className="under">
-        <button className="plus">
-          <img src={require("../image/button.png")} className="plus"></img>
-        </button>
+        <button className="plus"></button>
       </div>
-      <Toggles />
+      <Toggles/>
     </div>
   );
 }
