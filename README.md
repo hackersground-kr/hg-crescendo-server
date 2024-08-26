@@ -362,13 +362,22 @@ https://portal.azure.com/#home 에 접속합니다.
 
 ![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az9.png)
 
+
+ai 사용을 위한 방법
+
+애저 포털에서 openAI 검색
+gpt-4o 선택하고 생성합니다. 리소스 관리 - 키 값 및 엔드포인트에 들어가면 키가 2개가 생성된걸 확인할 수 있습니다.
+
+
 웹앱 소스에서 설정 -  환경변수에서 +추가를 클릭합니다.
 
 1번째 이름: DB_URL, 값: 방금 복사한 url
 
 2번쨰 이름: DB_PW, 값: 자신의 db 비밀번호
 
-이렇게 총 두개를 만들고 적용합니다.
+3번째 이름: CHATGPT_API_KEY, 값: openai key 1 또는 2(선택)
+
+이렇게 총 3개를 만들고 적용합니다.
 
 
 
