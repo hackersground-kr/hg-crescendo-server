@@ -110,7 +110,7 @@ winget install gh
 
      1-2. 그대로 아래 creat fork을 클릭합니다.
 
-![image.png](az1.png)
+![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az2.png)
 
      1-3. 자신의 리포지토리로 이동합니다.
 
@@ -118,7 +118,7 @@ winget install gh
 
 2-1. 초록색 Code를 눌러서 나온 HTTPS 링크를 복사하고,
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/06761558-9caa-4c67-9452-5f2449fc10dd/image.png)
+![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az3.png)
 
 2-2. 터미널에 아래 명령어를 입력합니다.
 
@@ -211,13 +211,13 @@ https://portal.azure.com/#home 에 접속합니다.
 
 1. DB 생성하기
 
-![스크린샷 2024-08-26 오전 3.42.43.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/4897675e-b687-4cec-809e-4044e70d7a70/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_3.42.43.png)
+![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az4.png)
 
 1-1. Cosmos DB를 검색합니다.
 
 1-2. Others 에 PostgreSQL 을 선택합니다. (만들기 클릭)
 
-![스크린샷 2024-08-26 오전 3.36.50.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/46e2bf0d-c3a9-47e3-9eed-fc39e79e8967/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_3.36.50.png)
+![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az5.png)
 
 1-3-1. 할당된 리소스 그룹을 선택합니다.
 
@@ -233,11 +233,11 @@ https://portal.azure.com/#home 에 접속합니다.
 
 1-3-6. 네트워킹으로 넘어갑니다
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/fb7b9373-653a-4bb1-978c-bf5b5bb3fe84/image.png)
+![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az6.png)
 
 1-4. 다음 버튼을 클릭하여 네트워킹 아이피 전체허용을 해줍니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/491ea702-5d2f-4eaa-b4e5-22060d32febb/image.png)
+![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az7.png)
 
 1-5. 만듭니다.
 
