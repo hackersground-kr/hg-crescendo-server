@@ -48,24 +48,24 @@ https://www.oracle.com/java/technologies/downloads/
 자바 17을 다운받습니다.
 
 <img width="267" alt="스크린샷 2024-08-26 오후 5 34 09" src="https://github.com/user-attachments/assets/3d529075-92ae-4cdc-bcee-1c9bf567017f"><br>
-<img width="487" alt="스크린샷 2024-08-26 오후 5 34 31" src="https://github.com/user-attachments/assets/6327a6a4-60ad-450a-a8bc-f4dd242ce9df">
-<img width="605" alt="스크린샷 2024-08-26 오후 5 34 46" src="https://github.com/user-attachments/assets/0262ad10-129b-4555-841f-1d9bf3bbeb31">
+<img width="487" alt="스크린샷 2024-08-26 오후 5 34 31" src="https://github.com/user-attachments/assets/6327a6a4-60ad-450a-a8bc-f4dd242ce9df"><br>
+<img width="605" alt="스크린샷 2024-08-26 오후 5 34 46" src="https://github.com/user-attachments/assets/0262ad10-129b-4555-841f-1d9bf3bbeb31"><br>
 
 변수 명에는 JAVA_HOME, 값에는 아까 JDK17을 설치한 경로를 입력합니다.
-<img width="623" alt="스크린샷 2024-08-26 오후 5 35 08" src="https://github.com/user-attachments/assets/448f180f-1cf5-42f6-81e8-ba5912231764">
+<img width="623" alt="스크린샷 2024-08-26 오후 5 35 08" src="https://github.com/user-attachments/assets/448f180f-1cf5-42f6-81e8-ba5912231764"><br>
 
 다음과 같이 입력합니다.
-<img width="620" alt="스크린샷 2024-08-26 오후 5 35 57" src="https://github.com/user-attachments/assets/eee7f27f-d752-4eb5-86b4-42b6ae776ac4">
+<img width="620" alt="스크린샷 2024-08-26 오후 5 35 57" src="https://github.com/user-attachments/assets/eee7f27f-d752-4eb5-86b4-42b6ae776ac4"><br>
 
 시스템 변수 중, 변수가 Path인 것을 찾아 편집을 클릭합니다.
-<img width="612" alt="스크린샷 2024-08-26 오후 5 36 52" src="https://github.com/user-attachments/assets/130494f8-3e2a-4c49-bd7a-e0dd99332fd4">
+<img width="612" alt="스크린샷 2024-08-26 오후 5 36 52" src="https://github.com/user-attachments/assets/130494f8-3e2a-4c49-bd7a-e0dd99332fd4"><br>
 
 새로 만들기를 클릭합니다.
-<img width="538" alt="스크린샷 2024-08-26 오후 5 37 38" src="https://github.com/user-attachments/assets/5f555481-4e67-46bf-a1f9-8d7e4cd28b7d">
+<img width="538" alt="스크린샷 2024-08-26 오후 5 37 38" src="https://github.com/user-attachments/assets/5f555481-4e67-46bf-a1f9-8d7e4cd28b7d"><br>
 
 
 입력 창에 %JAVA_HOME%\bin\ 을 입력하고 확인 버튼을 클릭합니다.
-<img width="534" alt="스크린샷 2024-08-26 오후 5 38 45" src="https://github.com/user-attachments/assets/ee163a99-49db-43fc-8728-2debad570bb6">
+<img width="534" alt="스크린샷 2024-08-26 오후 5 38 45" src="https://github.com/user-attachments/assets/ee163a99-49db-43fc-8728-2debad570bb6"><br>
 
 ---------
 
