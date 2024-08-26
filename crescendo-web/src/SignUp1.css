@@ -1,0 +1,90 @@
+.line {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background-color: #895d3c; /* 선의 색상 */
+  position: fixed;
+  margin: 0 auto; /* 화면 중앙에 배치 */
+}
+
+body {
+  background-color: #f8f4f3; /* 원하는 배경색으로 변경 */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#nextBtn {
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #895d3c; /* 배경색 (원하는 색상으로 변경 가능) */
+  color: white;
+  border: none;
+  border-radius: 50%; /* 원형 버튼 */
+  cursor: pointer;
+}
+
+#prevBtn {
+  position: fixed;
+  left: 1rem;
+  top: 2rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #895d3c; /* 배경색 (원하는 색상으로 변경 가능) */
+  color: white;
+  border: none;
+  border-radius: 50%; /* 원형 버튼 */
+  cursor: pointer;
+}
+
+#helpBtn {
+  position: fixed;
+  right: 1rem;
+  top: 2rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #895d3c; /* 배경색 (원하는 색상으로 변경 가능) */
+  color: white;
+  border: none;
+  border-radius: 50%; /* 원형 버튼 */
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* 화면 전체 높이 사용 */
+  padding: 1rem; /* 여백 추가 */
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+input#inputId {
+  border: none;
+  border-bottom: 2px solid #895d3c;
+  margin-top: 6rem;
+  padding: 0.5rem;
+  font-size: 16px;
+  background-color: #f8f4f3;
+  color: #eaddd8;
+  outline: none;
+}
