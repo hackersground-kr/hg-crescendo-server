@@ -243,33 +243,9 @@ https://portal.azure.com/#home 에 접속합니다.
 
 ![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az8.png)
 
-2. DB 연결하기
-
-2-1. 설정 - 연결 문자열 - JDBC의 url을 ‘?’전까지만 복사합니다.
-
-![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az9.png))
-
-2-2. intelliJ 로 클론해온 프로젝트를 (hg-crescendo-server)를 엽니다.
-
-2-2-1. crescendo-server/src/main/resources/yml 파일의 ${DB_URL} 을 지우고 방금 복사한 url을 붙여넣습니다.
-
-2-2-2. 같은 파일의 ${DB_PW}를 지우고 자신의 database 비밀번호를 적습니다. (틀리면 오류나요)
-
-2-3. github 커밋하기
-
-2-3-1. 아래 터미널 창을 엽니다
-
-![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az10.png)
-
-2-3-2. 다음 명령어를 차례로 입력합니다.
-
-```
-git add .
-git commit -m "edit yml"
-git push
-```
 
 ---
+
 
 이제 얼마 안 남았어요!!
 
@@ -299,6 +275,24 @@ git push
 
 3-1-7. 검토 및 만들기를 합니다.
 
+다시 cosmosDB - postgre로 돌아갑니다.
+
+3-2-0. DB 연결 및 환경변수
+
+3-2-0-1. 설정 - 연결 문자열 - JDBC의 url을 ‘?’전까지만 복사합니다.
+
+![스크린샷 2024-08-26 오전 4.30.42.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/c7739a38-7bed-4b44-a214-1a161db3e8a5/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_4.30.42.png)
+
+웹앱 소스에서 설정 -  환경변수에서 +추가를 클릭합니다.
+
+1번째 이름: DB_URL, 값: 방금 복사한 url
+
+2번쨰 이름: DB_PW, 값: 자신의 db 비밀번호
+
+이렇게 총 두개를 만들고 적용합니다.
+
+
+
 3-2. git Actions 설정하기
 
 3-2-1. 배포 → 배포 센터에 들어갑니다
@@ -317,7 +311,9 @@ git push
 
 3-2-5. intelliJ에서 터미널을 열고 아래의 명령어를 입력합니다.
 
+```
 git pull
+```
 
 3-2-6. .github/workflows 폴더에 yml파일이 두개가 생길텐데 원래 있던 파일을 삭제합니다.
 
