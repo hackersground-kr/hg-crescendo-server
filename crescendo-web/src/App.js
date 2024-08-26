@@ -17,6 +17,12 @@ import Counsel from "./pages/Counsel";
 import Board from "./pages/Board";
 
 const App = () => {
+  const [formData, setFormData] = useState({
+    id: "",
+    password: "",
+    confirmPassword: "",
+  });
+
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const location = useLocation();
 
@@ -37,7 +43,6 @@ const App = () => {
     return null;
   }
 
-  // 현재 경로에 따라 콘텐츠를 표시할지 결정. 빈 배열로 설정하면 모든 경로에서 콘텐츠가 표시되지 않음
   const showContent = ["/"].includes(location.pathname);
 
   return (
@@ -61,9 +66,9 @@ const App = () => {
       )}
 
       <Routes>
-        <Route path="/signup1" element={<SignUp1 />} />
-        <Route path="/signup2" element={<SignUp2 />} />
-        <Route path="/signup3" element={<SignUp3 />} />
+        <Route path="/signup1" element={<SignUp1 formData={formData} setFormData={setFormData} />} />
+        <Route path="/signup2" element={<SignUp2 formData={formData} setFormData={setFormData} />} />
+        <Route path="/signup3" element={<SignUp3 formData={formData} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Main" element={<Main/>}/>
         <Route path="/Guide" element={<Guide/>}/>

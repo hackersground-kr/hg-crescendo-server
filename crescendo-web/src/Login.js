@@ -1,47 +1,71 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SignUp1.css";
+import axios from "axios";
 
-function Header() {
-  return (
-    <header>
-      <div className="line"></div>
-      <div id="idBox">
-        <h1>
-          로그인을 위해
-          <br />
-          아이디와 비밀번호를
-          <br />
-          정확하게 입력해주세요!
-        </h1>
-      </div>
-
-      <input id="inputId" type="text" placeholder="아이디 입력" />
-      <br />
-      <input id="inputPwd" type="text" placeholder="비밀번호 확인 입력" />
-    </header>
-  );
-}
-
-function Button() {
+function Login() {
   const navigate = useNavigate();
+  const [loginData, setLoginData] = useState({
+    id: "",
+    password: "",
+  });
 
-  return (
-    <div className="btns">
-      <input id="prevBtn" type="button" onClick={() => navigate(-1)} />
-      <input id="login" type="button" value="로그인" />
-      <input id="helpBtn" type="button" />
-    </div>
-  );
-}
+  const handleInputChange = (e) => {
+    setLoginData({ ...loginData, [e.target.name]: e.target.value });
+  };
 
-function SignUp2() {
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post("20.41.66.225", loginData);
+
+      if (response.status === 200) {
+        navigate("/Main");
+      } else {
+        console.error("Login failed");
+      }
+    } catch (error) {
+      console.error("There was an error during the login process:", error);
+    }
+  };
+
   return (
     <div>
-      <Header />
-      <Button />
+      <header>
+        <div className="line"></div>
+        <div id="idBox">
+          <h1>
+            로그인을 위해
+            <br />
+            아이디와 비밀번호를
+            <br />
+            정확하게 입력해주세요!
+          </h1>
+        </div>
+        <input
+          id="inputId"
+          type="text"
+          name="id"
+          placeholder="아이디 입력"
+          value={loginData.id}
+          onChange={handleInputChange}
+        />
+        <br />
+        <input
+          id="inputPwd"
+          type="password"
+          name="password"
+          placeholder="비밀번호 입력"
+          value={loginData.password}
+          onChange={handleInputChange}
+        />
+      </header>
+      <div className="btns">
+        <button id="prevBtn" onClick={() => navigate(-1)} aria-label="Previous" />
+        <button id="login" onClick={handleLogin} aria-label="Login">로그인</button>
+        <button id="helpBtn" aria-label="Help" />
+      </div>
     </div>
   );
 }
 
-export default SignUp2;
+export default Login;
