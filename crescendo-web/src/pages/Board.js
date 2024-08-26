@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Board.css";
 import { useNavigate } from "react-router-dom";
 
@@ -23,6 +23,12 @@ function Toggles() {
   );
 }
 
+function newPage() {
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [list, setList] = useState([]);
+}
+
 function Board() {
   return (
     <div>
@@ -30,6 +36,7 @@ function Board() {
       <div className="image-container">
         <img src={require("../image/var.png")} width="440px" alt="var" />
       </div>
+
       <Toggles />
     </div>
   );
