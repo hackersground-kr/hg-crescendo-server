@@ -313,8 +313,6 @@ git push
 
 하지만 
 
-![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az15.png)
-
 로그에 들어가보면 실패라고 나올 겁니다.
 
 3-2-5. intelliJ에서 터미널을 열고 아래의 명령어를 입력합니다.
@@ -414,6 +412,7 @@ git push
 
 CI/CD 로그에 앱 서비스 링크 혹은
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/05aac857-8183-4d35-9566-f16f7695158a/image.png)
+![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az15.png)
 
 배포한 웹앱 소스에 도메인을 통해 확인할 수 있다.
+![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az16.png)
