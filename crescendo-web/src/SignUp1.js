@@ -24,14 +24,13 @@ function Button() {
 
   return (
     <div>
-      <input
-        id="prevBtn"
-        type="button"
-        value="⬅️"
-        onClick={() => navigate(-1)}
+      <button id="prevBtn" onClick={() => navigate(-1)} aria-label="Previous" />
+      <button
+        id="nextBtn"
+        onClick={() => navigate("/signup2")}
+        aria-label="Next"
       />
-      <input id="nextBtn" type="button" value="➡️" />
-      <input id="helpBtn" type="button" value="❓" />
+      <button id="helpBtn" aria-label="Help" />
     </div>
   );
 }

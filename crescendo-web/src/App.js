@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import SignUp1 from "./SignUp1"; // SignUp1 컴포넌트를 불러옵니다.
+import SignUp1 from "./SignUp1";
+import SignUp2 from "./SignUp2";
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -35,13 +36,13 @@ const App = () => {
         <button className="button1" disabled>
           로그인
         </button>
-        <Link to="/signup">
+        <Link to="/signup1">
           <button className="button2">회원가입</button>
         </Link>
 
         <Routes>
-          <Route path="/signup" element={<SignUp1 />} />{" "}
-          {/* 회원가입 경로 설정 */}
+          <Route path="/signup1" element={<SignUp1 />} />
+          <Route path="/signup2" element={<SignUp2 />} />
         </Routes>
       </div>
     </Router>
