@@ -12,14 +12,14 @@ spring:
 #        dialect: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
 
-#ai:
-#  openai:
-#    api-key: ${CHATGPT_API_KEY}
-#    chat:
-#      options:
-#        model: gpt-3.5-turbo
+ai:
+  openai:
+    api-key: ${CHATGPT_API_KEY}
+    chat:
+      options:
+        model: gpt-3.5-turbo
 
 
 redis:
@@ -28,7 +28,7 @@ redis:
   password: 3333
 
 jwt:
-  secret-key: c2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQtc2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQK
+  secret-key: ${SECRET_KEY}
   access-token-expiration: 300000 # 5m
   refresh-token-expiration: 86400000 # 24h
 

@@ -49,7 +49,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/auth/signup", "/auth/login", "/auth/reissue").anonymous()
                         .requestMatchers(HttpMethod.GET, "/auth/me").authenticated()
                         .requestMatchers(HttpMethod.GET, "/swagger-ui/**", "/v3/api-docs/**").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/api/chat").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/ai/chat").permitAll()
                         .requestMatchers(HttpMethod.POST, "/ws/chat").permitAll()
                         .requestMatchers(HttpMethod.GET, "/ws/chat").permitAll()
                         .requestMatchers(HttpMethod.POST, "/chat").permitAll()
