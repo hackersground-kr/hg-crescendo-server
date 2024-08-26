@@ -287,7 +287,7 @@ https://portal.azure.com/#home 에 접속합니다.
 
 ![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az4.png)
 
-1-1. Cosmos DB를 검색합니다.
+1-1. Cosmos DB를 검색합니다. +만들기를 클릭합니다
 
 1-2. Others 에 PostgreSQL 을 선택합니다. (만들기 클릭)
 
