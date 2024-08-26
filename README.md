@@ -22,6 +22,7 @@
 
 ## 환경 설정 - 1
 
+
 **사전 준비 사항 목록**
 
 - GitHub Account
@@ -32,6 +33,9 @@
 - Azure Resource Group
 - java 17
 - intelliJ
+
+- powershell, 터미널 등은 컴퓨터 내의 검색을 통해 찾을 수 있습니다.
+- 윈도우는 powershell에서 진행합니다.
 
 ## 환경 설정 - 2
 
@@ -45,13 +49,13 @@ https://www.oracle.com/java/technologies/downloads/
 오라클에서
 <img width="641" alt="스크린샷 2024-08-26 오후 5 32 38" src="https://github.com/user-attachments/assets/5d168890-4318-4553-a10c-2af7a551445e">
 <br>
-자바 17을 다운받습니다.
+자바 17을 다운받습니다. 설치할 때는 따로 설정할 내용을 없습니다.
 
 <img width="267" alt="스크린샷 2024-08-26 오후 5 34 09" src="https://github.com/user-attachments/assets/3d529075-92ae-4cdc-bcee-1c9bf567017f"><br>
 <img width="487" alt="스크린샷 2024-08-26 오후 5 34 31" src="https://github.com/user-attachments/assets/6327a6a4-60ad-450a-a8bc-f4dd242ce9df"><br>
 <img width="605" alt="스크린샷 2024-08-26 오후 5 34 46" src="https://github.com/user-attachments/assets/0262ad10-129b-4555-841f-1d9bf3bbeb31"><br>
 
-변수 명에는 JAVA_HOME, 값에는 아까 JDK17을 설치한 경로를 입력합니다.
+변수 명에는 JAVA_HOME, 값에는 아까 JDK17을 설치한 경로를 입력합니다. 사진과 같이 입력하면 됩니다.
 <img width="623" alt="스크린샷 2024-08-26 오후 5 35 08" src="https://github.com/user-attachments/assets/448f180f-1cf5-42f6-81e8-ba5912231764"><br>
 
 다음과 같이 입력합니다.
@@ -118,6 +122,10 @@ java -version
 아래 링크에서 각자의 운영체제에 맞는 버전 설치
 https://www.jetbrains.com/ko-kr/idea/download/?section=mac
 
+
+윈도우서 다운로드할 때 설정입니다.
+<img width="489" alt="스크린샷 2024-08-27 오전 5 49 44" src="https://github.com/user-attachments/assets/ec453e0e-c33e-417a-b02a-f36b8e2bc13a">
+
 --------
 
 0-2. brew 설치 (mac)
@@ -130,8 +138,9 @@ https://www.jetbrains.com/ko-kr/idea/download/?section=mac
 
 0-2. winget 설치 (window)
 
-다음 링크에서 winget을 설치한다.
+다음 링크에서 winget을 설치합니다.
 https://apps.microsoft.com/detail/9nblggh4nns1?rtc=1&hl=ko-kr&gl=KR#activetab=pivot:overviewtab
+파워셀에 winget을 입력했을 때 정보가 나온다면 설치되어있는 것입니다.
 
 0-3. AZD, AZ, GH 설치
 
@@ -157,8 +166,8 @@ brew update && brew install azure-cli
 ```
 
 ```
-# 윈도우 powershell
-$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item .\AzureCLI.msi
+# 윈도우
+winget install -e --id Microsoft.AzureCLI
 ```
 
 0-3-3. GH CLI
@@ -170,7 +179,7 @@ brew install gh
 
 ```
 # 윈도우
-winget install gh
+winget install -e --id GitHub.cli
 ```
 
 
@@ -178,7 +187,7 @@ winget install gh
 
 1. 이 리포지토리를 자신의 GitHub 계정으로 포크합니다.
 
-1-1. 우측 상단 4개의 버튼 중 3번째 버튼 Fork를 눌러 포크할 수 있습니다.
+1-1. 우측 상단 버튼 Fork를 눌러 포크할 수 있습니다.
 
 ![1](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az1.png)
 
@@ -194,7 +203,7 @@ winget install gh
 
 ![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az3.png)
 
-2-2. 터미널에 아래 명령어를 입력합니다.
+2-2. 터미널 또는 파워셀에 아래 명령어를 입력합니다.
 
 ```
 git clone (복사한 url)
@@ -229,7 +238,7 @@ az login
 # 성공 메시지가 나오면 창을 닫고 터미널로 돌아갑니다.
 
 # GitHub CLI login
-GITHUB_TOKEN=
+# GITHUB_TOKEN=
 gh auth login
 
 # GitHub.com을 선택하고 엔터를 클릭합니다.
@@ -260,7 +269,7 @@ gh auth status
 ```
 # mac
 AZURE_ENV_NAME="{{ GITHUB_ID }}"
-# window
+# window (** powershell, 띄어쓰기 주의)
 $AZURE_ENV_NAME = "{{ GITHUB_ID }}"
 
 # {{ }} 를 모두 지우고 " " 안에 자신의 깃헙 아이디를 적어주세요
@@ -273,7 +282,7 @@ azd init -e $AZURE_ENV_NAME
 
 
 
-5-1. 다음과 같은 메시지가 출력됩니다!!
+5-1. 다음과 같은 메시지가 출력됩니다
 ```
 SUCCESS: Your app is ready for the cloud!
 ```
@@ -321,8 +330,6 @@ https://portal.azure.com/#home 에 접속합니다.
 ---
 
 
-이제 얼마 안 남았어요!!
-
 다시 azure portal로 돌아갑니다.
 
 ![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az11.png))
@@ -351,19 +358,36 @@ https://portal.azure.com/#home 에 접속합니다.
 
 다시 cosmosDB - postgre로 돌아갑니다.
 
+3-1-8 ai 사용
+
+애저 포털에서 openAI 검색 및 +만들기
+이름은 아무렇게나, 지역은 korea central 선택하고 생성합니다. 
+
+3-1-8-1
+
+리소스 관리 - 키 값 및 엔드포인트에 들어가면 키가 2개가 생성된걸 확인할 수 있습니다.
+<img width="763" alt="스크린샷 2024-08-27 오전 7 16 45" src="https://github.com/user-attachments/assets/4828c264-a084-4aeb-8812-96ef0c411c3c">
+
+
+
 3-2-0. DB 연결 및 환경변수
 
 3-2-0-1. 설정 - 연결 문자열 - JDBC의 url을 ‘?’전까지만 복사합니다.
 
 ![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az9.png)
 
-웹앱 소스에서 설정 -  환경변수에서 +추가를 클릭합니다.
 
-1번째 이름: DB_URL, 값: 방금 복사한 url
+
+
+아까 만든 웹앱 소스에서 설정 -  환경변수에서 +추가를 클릭합니다.
+
+1번째 이름: DB_URL, 값: 방금 복사한 데이터베이스 url
 
 2번쨰 이름: DB_PW, 값: 자신의 db 비밀번호
 
-이렇게 총 두개를 만들고 적용합니다.
+3번째 이름: CHATGPT_API_KEY, 값: openai의 key 1 또는 2(선택)
+
+이렇게 총 3개를 만들고 적용합니다.
 
 
 
@@ -377,26 +401,26 @@ https://portal.azure.com/#home 에 접속합니다.
 
 3-2-4. 설정을 마쳤다면 저장을 누릅니다. 깃액션이 활성화됩니다.
 
+
+
+3-2-5-1. intellij에서 자신이 포크한 폴더 경로를 열어줍니다. (hg-crescendo-server)
+
 ![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az14.png)
 
-하지만 
-
-로그에 들어가보면 실패라고 나올 겁니다.
-
-3-2-5. intelliJ에서 터미널을 열고 아래의 명령어를 입력합니다.
+3-2-5-2. intelliJ에서 터미널을 열고 아래의 명령어를 입력합니다.
 
 ```
 git pull
 ```
 
-3-2-6. .github/workflows 폴더에 yml파일이 두개가 생길텐데 원래 있던 파일을 삭제합니다.
+3-2-6. .github/workflows 폴더에 yml파일이 두개가 있습니다. 원래 있던 파일을 삭제합니다.
 
 3-2-7. 새로 생긴 yml 파일에 내용을 다음과 같이 변경합니다. 복사 붙여넣기를 하셔도 괜찮습니다. 
 
 단 ** 주의할 점
 
 1. 가장 아래에서 2번째에 app-name 은 당신의 웹앱 리소스 네임으로 변경하셔야합니다. 
-2. client-id, tanant-id, subscription-id는 자신이 발급받은 키를 쓰셔야 합니다. 이전 파일 지웠어도 commit 기록 보면 찾을 수 있어요
+2. client-id, tanant-id, subscription-id는 자신이 발급받은 키를 쓰셔야 합니다. 이전 파일 지웠어도 깃허브 commit 기록 보면 찾을 수 있습니다.
 
 ```
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
@@ -484,5 +508,5 @@ CI/CD 로그에 앱 서비스 링크 혹은
 
 ![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az15.png)
 
-배포한 웹앱 소스에 도메인을 통해 확인할 수 있다.
+배포한 웹앱 소스에 도메인을 통해 확인할 수 있습니다.
 ![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az16.png)

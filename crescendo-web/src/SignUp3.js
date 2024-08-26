@@ -1,42 +1,40 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./SignUp1.css";
+import axios from "axios";
 
-function Header() {
-  return (
-    <header className="checkSet">
-      <div className="line"></div>
-      <img src={require("./image/check.png")} className="check" alt="check" />
-      <div id="inBox">
-        <h1 id="signUp3">flower님, 반가워요!</h1>
-        <h2>해바라기를 시작해볼까요?</h2>
-      </div>
-    </header>
-  );
-}
-
-function Button() {
+function SignUp3({ formData }) {
   const navigate = useNavigate();
 
-  return (
-    <div>
-      <input id="prevBtn" type="button" onClick={() => navigate(-1)} />
-      <input
-        id="startBtn"
-        type="button"
-        value="시작하기"
-        onClick={() => navigate("/")}
-      />
-      <input id="helpBtn" type="button" />
-    </div>
-  );
-}
+  const handleSubmit = async () => {
+    try {
+      const response = await axios.post("http://20.41.66.225/auth/signup", formData);
 
-function SignUp3() {
+      if (response.status === 200) {
+        navigate("/login");
+      } else {
+        console.error("Signup failed");
+      }
+    } catch (error) {
+      console.error("There was an error during the signup process:", error);
+    }
+  };
+
   return (
     <div>
-      <Header />
-      <Button />
+      <header>
+        <div className="line"></div>
+        <img src={require("./image/check.png")} className="check" alt="check" />
+        <div id="inBox">
+          <h1>{formData.id}님, 반가워요!</h1>
+          <h2>해바라기를 시작해볼까요?</h2>
+        </div>
+      </header>
+      <div>
+        <button id="prevBtn" onClick={() => navigate(-1)} aria-label="Previous" />
+        <button id="startBtn" onClick={handleSubmit} aria-label="Start">시작하기</button>
+        <button id="helpBtn" aria-label="Help" />
+      </div>
     </div>
   );
 }
