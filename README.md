@@ -2,13 +2,6 @@
 
 해커그라운드 해커톤에 참여하는 `Crescendo` 팀의 `해바라기`입니다.
 
-## 참고 문서
-
-> 아래 두 링크는 해커톤에서 앱을 개발하면서 참고할 만한 문서들입니다. 이 문서들에서 언급한 서비스 이외에도 더 많은 서비스들이 PaaS, SaaS, 서버리스 형태로 제공되니 참고하세요.
-
-- [순한맛](./REFERENCES_BASIC.md)
-- [매운맛](./REFERENCES_ADVANCED.md)
-
 ## 제품/서비스 소개
 
 <!-- 아래 링크는 지우지 마세요 -->
@@ -113,7 +106,7 @@ winget install gh
 
 1-1. 우측 상단 4개의 버튼 중 3번째 버튼 Fork를 눌러 포크할 수 있습니다.
 
-![스크린샷 2024-08-26 오전 2.48.33.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/1de3a3a3-e14d-4867-9671-b09fcbb1037c/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_2.48.33.png)
+![1]([https://prod-files-secure.s3.us-west-2.amazonaws.com/82b25d19-e5e4-4e03-aadd-b62221b6ba72/1de3a3a3-e14d-4867-9671-b09fcbb1037c/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_2.48.33.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az1.png))
 
      1-2. 그대로 아래 creat fork을 클릭합니다.
 
