@@ -267,7 +267,7 @@ gh auth status
 ```
 # mac
 AZURE_ENV_NAME="{{ GITHUB_ID }}"
-# window
+# window (** powershell)
 $AZURE_ENV_NAME = "{{ GITHUB_ID }}"
 
 # {{ }} 를 모두 지우고 " " 안에 자신의 깃헙 아이디를 적어주세요
