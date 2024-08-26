@@ -9,10 +9,28 @@ spring:
     properties:
       hibernate:
         format_sql: true
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-        ddl-auto: update
-
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
+    hibernate:
+      ddl-auto: update
+
+ai:
+  openai:
+    api-key: ${CHATGPT_API_KEY}
+    chat:
+      options:
+        model: gpt-3.5-turbo
+
+
+redis:
+  host: 13.209.80.146
+  port: 6379
+  password: 3333
+
+jwt:
+  secret-key: c2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQtc2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQK
+  access-token-expiration: 300000 # 5m
+  refresh-token-expiration: 86400000 # 24h
 
 server:
   port: 8088
