@@ -35,7 +35,7 @@ function Counsel() {
         <input id="counselorBtn" type="button" value="상담사" />
       </div>
       <div className="var-container">
-        <img id="banner" src={require("../image/banner.png")} width="440px" />
+        <img id="banner" src={require("../image/banner.png")} width="440px" alt="banner" />
       </div>
       <div className="chatList">
         <input id="user1" type="button" />

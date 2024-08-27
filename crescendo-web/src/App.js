@@ -17,15 +17,15 @@ import Counsel from "./pages/Counsel";
 import Board from "./pages/Board";
 
 const App = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  // const openModal = () => {
+  //   setIsModalOpen(true);
+  // };
   // 모달 닫기 함수
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-  
+  // const closeModal = () => {
+  //   setIsModalOpen(false);
+  // };
+
   const [formData, setFormData] = useState({
     id: "",
     password: "",

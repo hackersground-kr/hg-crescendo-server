@@ -2,19 +2,19 @@ import React from "react";
 import "./Guide.css";
 import { useNavigate } from "react-router-dom";
 
-function Modal({ isOpen, onClose }) {
-  // 모달이 열려 있을 때만 내용이 렌더링됩니다.
-  if (!isOpen) return null;
-  return (
-    <div>
-      <div>
-        <h2>팝업창</h2>
-        <p>이것은 팝업창입니다.</p>
-        <button onClick={onClose}>닫기</button>
-      </div>
-    </div>
-  );
-}
+// function Modal({ isOpen, onClose }) {
+//   // 모달이 열려 있을 때만 내용이 렌더링됩니다.
+//   if (!isOpen) return null;
+//   return (
+//     <div>
+//       <div>
+//         <h2>팝업창</h2>
+//         <p>이것은 팝업창입니다.</p>
+//         <button onClick={onClose}>닫기</button>
+//       </div>
+//     </div>
+//   );
+// }
 
 // 토글 버튼을 렌더링하는 컴포넌트
 function Toggles() {
@@ -80,7 +80,7 @@ function Guide() {
           <img src={require("../image/6.png")} alt="step 6" />
         </button>
       </div>
-      <img src={require("../image/7.png")} className="p7"/>
+      <img src={require("../image/7.png")} className="p7" alt="7"/>
       <Toggles />
     </div>
   );

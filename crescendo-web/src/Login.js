@@ -14,19 +14,7 @@ function Login() {
     setLoginData({ ...loginData, [e.target.name]: e.target.value });
   };
 
-  const handleLogin = async () => {
-    try {
-      const response = await axios.post("https://sh-crescendo-server.azurewebsites.net/auth/login", loginData);
 
-      if (response.status === 200) {
-        navigate("/Main");
-      } else {
-        console.error("Login failed");
-      }
-    } catch (error) {
-      console.error("There was an error during the login process:", error);
-    }
-  };
 
   return (
     <div>

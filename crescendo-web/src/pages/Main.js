@@ -86,13 +86,13 @@ function Main() {
   return (
     <div className="container">
       <div className="box"></div>
-      <img src={require("../image/var.png")} width="440px" className="var" />
+      <img src={require("../image/var.png")} width="440px" className="var" alt="var"/>
 
       {/* 검색창 (유지) */}
       <input className="text" placeholder="검색어를 입력하세요" />
 
       <h4>오늘의 추천 Todo 🔥</h4>
-      <img src={require("../image/onedayClass.png")} className="Todo" />
+      <img src={require("../image/onedayClass.png")} className="Todo" alt="onedayClass"/>
 
       <h5>My Todo</h5>
       <div className="underline"></div>
