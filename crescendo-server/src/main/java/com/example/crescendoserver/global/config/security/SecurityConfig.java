@@ -15,6 +15,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+
+import java.util.Collections;
 
 @Configuration
 @RequiredArgsConstructor
@@ -34,7 +38,8 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
-                .cors(AbstractHttpConfigurer::disable)
+//                .cors(AbstractHttpConfigurer::disable)
+                .cors(corsConfigurer -> corsConfigurer.configurationSource(corsConfigurationSource()))
                 .formLogin(AbstractHttpConfigurer::disable)
                 .httpBasic(AbstractHttpConfigurer::disable)
                 .rememberMe(AbstractHttpConfigurer::disable)
@@ -54,12 +59,12 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/ws/chat").permitAll()
                         .requestMatchers(HttpMethod.POST, "/chat").permitAll()
                         .requestMatchers(HttpMethod.GET, "/chat").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/todos/{todoId}").authenticated()
-                        .requestMatchers(HttpMethod.GET, "/todos").authenticated()
-                        .requestMatchers(HttpMethod.POST, "/todos").authenticated()
-                        .requestMatchers(HttpMethod.PATCH, "/todos/{todoId}/check").authenticated()
-                        .requestMatchers(HttpMethod.PATCH, "/todos/{todoId}").authenticated()
-                        .requestMatchers(HttpMethod.DELETE, "/todos/{todoId}").authenticated()
+                        .requestMatchers(HttpMethod.GET, "/todos/{todoId}").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/todos").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/todos").permitAll()
+                        .requestMatchers(HttpMethod.PATCH, "/todos/{todoId}/check").permitAll()
+                        .requestMatchers(HttpMethod.PATCH, "/todos/{todoId}").permitAll()
+                        .requestMatchers(HttpMethod.DELETE, "/todos/{todoId}").permitAll()
                         .requestMatchers(HttpMethod.GET, "/posts/{postId}").authenticated()
                         .requestMatchers(HttpMethod.GET, "/posts").authenticated()
                         .requestMatchers(HttpMethod.POST, "/posts").authenticated()
@@ -71,5 +76,16 @@ public class SecurityConfig {
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .addFilterBefore(jwtExceptionFilter, JwtAuthenticationFilter.class)
                 .build();
+    }
+
+    CorsConfigurationSource corsConfigurationSource() {
+        return request -> {
+            CorsConfiguration config = new CorsConfiguration();
+            config.setAllowedHeaders(Collections.singletonList("*"));
+            config.setAllowedMethods(Collections.singletonList("*"));
+            config.setAllowedOriginPatterns(Collections.singletonList("*"));
+            config.setAllowCredentials(true);
+            return config;
+        };
     }
 }
