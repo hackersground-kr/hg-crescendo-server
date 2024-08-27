@@ -33,7 +33,7 @@ function Main() {
   useEffect(() => {
     // GET 요청에서 올바른 URL 사용
     axios
-      .get("http://20.41.66.225/todos") // 전체 Todo 리스트를 가져오는 경로
+      .get("https://sh-crescendo-server.azurewebsites.net/todos") // 전체 Todo 리스트를 가져오는 경로
       .then((response) => {
         setTodos(response.data);
         setLoading(false);
@@ -46,10 +46,11 @@ function Main() {
 
   const addTodo = () => {
     if (newTodo.trim() === "") return;
+    const today = new Date();
 
     // POST 요청에서 올바른 URL 사용
     axios
-      .post("http://20.41.66.225/todos", { content: newTodo }) // 새로운 Todo를 추가하는 경로
+      .post("https://sh-crescendo-server.azurewebsites.net/todos", { title: newTodo, date:today }) // 새로운 Todo를 추가하는 경로
       .then((response) => {
         setTodos([...todos, response.data]);
         setNewTodo(""); // 입력 필드 초기화
@@ -61,7 +62,7 @@ function Main() {
   const deleteTodo = (todoId) => {
     // DELETE 요청에서 올바른 URL 사용
     axios
-      .delete(`http://20.41.66.225/todos/${todoId}`) // 특정 Todo를 삭제하는 경로
+      .delete(`https://sh-crescendo-server.azurewebsites.net/${todoId}`) // 특정 Todo를 삭제하는 경로
       .then(() => {
         setTodos(todos.filter((todo) => todo.id !== todoId));
       })
@@ -71,7 +72,7 @@ function Main() {
   const toggleTodo = (todoId, checked) => {
     // PATCH 요청에서 올바른 URL 사용
     axios
-      .patch(`http://20.41.66.225/todos/${todoId}/check`, { checked: !checked }) // Todo 상태를 업데이트하는 경로
+      .patch(`https://sh-crescendo-server.azurewebsites.net/todos/${todoId}/check`, { checked: !checked }) // Todo 상태를 업데이트하는 경로
       .then(() => {
         setTodos(
           todos.map((todo) =>

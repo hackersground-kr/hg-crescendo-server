@@ -2,6 +2,20 @@ import React from "react";
 import "./Guide.css";
 import { useNavigate } from "react-router-dom";
 
+function Modal({ isOpen, onClose }) {
+  // 모달이 열려 있을 때만 내용이 렌더링됩니다.
+  if (!isOpen) return null;
+  return (
+    <div>
+      <div>
+        <h2>팝업창</h2>
+        <p>이것은 팝업창입니다.</p>
+        <button onClick={onClose}>닫기</button>
+      </div>
+    </div>
+  );
+}
+
 // 토글 버튼을 렌더링하는 컴포넌트
 function Toggles() {
   const navigate = useNavigate();
@@ -29,7 +43,12 @@ function Guide() {
   return (
     <div className="container">
       <div className="box"></div>
-      <img src={require("../image/var.png")} width="440px" className="var" />
+      <img
+        src={require("../image/var.png")}
+        width="440px"
+        className="var"
+        alt="var"
+      />
       <h4>
         예비 상주님을 위한 <br />
         사망진단부터 장례까지
@@ -39,17 +58,29 @@ function Guide() {
 
       {/* HStack 안에 버튼으로 이미지들을 감쌈 */}
       <div className="HStack" align="center" justify="center">
-        <img src={require("../image/1.png")} />
-        <img src={require("../image/2.png")} />
-        <img src={require("../image/3.png")} />
+        <button className="image-button">
+          <img src={require("../image/1.png")} alt="step 1" />
+        </button>
+        <button className="image-button">
+          <img src={require("../image/2.png")} alt="step 2" />
+        </button>
+        <button className="image-button">
+          <img src={require("../image/3.png")} alt="step 3" />
+        </button>
       </div>
 
       <div className="HStack" align="center" justify="center">
-        <img src={require("../image/4.png")} />
-        <img src={require("../image/5.png")} />
-        <img src={require("../image/6.png")} />
+        <button className="image-button">
+          <img src={require("../image/4.png")} alt="step 4" />
+        </button>
+        <button className="image-button">
+          <img src={require("../image/5.png")} alt="step 5" />
+        </button>
+        <button className="image-button">
+          <img src={require("../image/6.png")} alt="step 6" />
+        </button>
       </div>
-
+      <img src={require("../image/7.png")} className="p7"/>
       <Toggles />
     </div>
   );

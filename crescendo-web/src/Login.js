@@ -16,7 +16,7 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post("http://20.41.66.225/auth/login", loginData);
+      const response = await axios.post("https://sh-crescendo-server.azurewebsites.net/auth/login", loginData);
 
       if (response.status === 200) {
         navigate("/Main");

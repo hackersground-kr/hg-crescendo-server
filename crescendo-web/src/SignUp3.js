@@ -8,12 +8,9 @@ function SignUp3({ formData }) {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("http://20.41.66.225/auth/signup", formData);
-
-      if (response.status === 200) {
-        navigate("/login");
-      } else {
-        console.error("Signup failed");
+      const res = await axios.post("https://sh-crescendo-server.azurewebsites.net/auth/signup", {username:formData.id,password:formData.password});
+      if(res){
+        navigate("/Main");
       }
     } catch (error) {
       console.error("There was an error during the signup process:", error);
@@ -33,7 +30,7 @@ function SignUp3({ formData }) {
       <div>
         <button id="prevBtn" onClick={() => navigate(-1)} aria-label="Previous" />
         <button id="startBtn"
-        onClick={() => navigate("/Main")}
+        onClick={handleSubmit}
         aria-label="Start">시작하기</button>
         <button id="helpBtn" aria-label="Help" />
       </div>
