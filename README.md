@@ -36,6 +36,7 @@
 
 - powershell, 터미널 등은 컴퓨터 내의 검색을 통해 찾을 수 있습니다.
 - 윈도우는 powershell에서 진행합니다.
+- 만약 깃이 없다면 https://git-scm.com/download/win 링크에서 윈도우 64로 설치를 해주세요, 설정은 건드리지 않아도 됩니다.
 
 ## 환경 설정 - 2
 
@@ -269,6 +270,7 @@ gh auth status
 ```
 # mac
 AZURE_ENV_NAME="{{ GITHUB_ID }}"
+
 # window (** powershell, 띄어쓰기 주의)
 $AZURE_ENV_NAME = "{{ GITHUB_ID }}"
 
@@ -340,11 +342,11 @@ https://portal.azure.com/#home 에 접속합니다.
 
 3-1-1. app service를 검색합니다.
 
-3-1-2. 만들기 → 웹앱
+3-1-2. 만들기 버튼을 클릭하여 웹앱을 선택합니다.
 
 3-1-3. 할당된 리소스 그룹을 선택합니다
 
-3-1-4. 고유한 호스트 이름(서버의 도메인 주소)를 설정할 수 있습니다. (선택사항, 필수 X, 만약 켠다면 도메인 이름이 복잡해집니다.)
+3-1-4. 고유한 호스트 이름을 설정할 수 있습니다.
 
 3-1-5. 코드 → 자바 17 → java SE 그리고 korea Central을 선택합니다.
 
@@ -356,36 +358,43 @@ https://portal.azure.com/#home 에 접속합니다.
 
 3-1-7. 검토 및 만들기를 합니다.
 
-다시 cosmosDB - postgre로 돌아갑니다.
 
 3-1-8 ai 사용
 
 애저 포털에서 openAI 검색 및 +만들기
-이름은 아무렇게나, 지역은 korea central 선택하고 생성합니다. 
+할당된 리소스 그룹을 선택하고
+이름은 아무렇게나, 지역은 korea central 선택하고 생성합니다. (이외 다른 수정사항 없음)
 
 3-1-8-1
 
-리소스 관리 - 키 값 및 엔드포인트에 들어가면 키가 2개가 생성된걸 확인할 수 있습니다.
+리소스 관리 - 키 값 및 엔드포인트에 들어가거나, 개요에서 오른쪽에 '키를 관리하려면 여기를 클릭' 을 눌러 이동하면
+키가 2개가 생성된걸 확인할 수 있습니다. key1을 복사해서 메모장에 붙혀둡니다.
 <img width="763" alt="스크린샷 2024-08-27 오전 7 16 45" src="https://github.com/user-attachments/assets/4828c264-a084-4aeb-8812-96ef0c411c3c">
 
 
 
 3-2-0. DB 연결 및 환경변수
 
-3-2-0-1. 설정 - 연결 문자열 - JDBC의 url을 ‘?’전까지만 복사합니다.
+다시 자신이 만든 cosmosDB - postgre로 돌아갑니다. (포탈로 돌아가서 방문 기록을 보면 쉽게 찾을 수 있습니다.)
+
+3-2-0-1. 설정 - 연결 문자열 - JDBC의 url을 ‘?’전까지만 복사합니다. ('?'는 복사하면 x) 이것도 메모장에 적어줍니다.
 
 ![png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az9.png)
 
 
+자신이 만든 앱서비스로 다시 이동합니다.
 
+설정 -  환경변수에서 +추가를 클릭합니다.
 
-아까 만든 웹앱 소스에서 설정 -  환경변수에서 +추가를 클릭합니다.
+이름: DB_URL, 값: 방금 복사한 데이터베이스 url
+를 만들고 완료합니다.
 
-1번째 이름: DB_URL, 값: 방금 복사한 데이터베이스 url
+또 다시 +추가를 클릭하여
+이름: DB_PW, 값: 자신의 db 비밀번호
+를 만듭니다.
 
-2번쨰 이름: DB_PW, 값: 자신의 db 비밀번호
-
-3번째 이름: CHATGPT_API_KEY, 값: openai의 key 1 또는 2(선택)
+마지막으로 한번 더 +추가를 누르고
+이름: CHATGPT_API_KEY, 값: openai에서 복사했던 key1
 
 이렇게 총 3개를 만들고 적용합니다.
 
@@ -397,30 +406,35 @@ https://portal.azure.com/#home 에 접속합니다.
 
 3-2-2. 소스 : GitHub
 
-3-2-3. 포크해온 리포지토리와 main 분기를 선택합니다
+3-2-3. 포크해온 리포지토리(조직: 자신의 깃헙 아이디, 리포지토리: hg-crescendo-server)와 main 분기를 선택합니다
 
 3-2-4. 설정을 마쳤다면 저장을 누릅니다. 깃액션이 활성화됩니다.
 
-
+----------
 
 3-2-5-1. intellij에서 자신이 포크한 폴더 경로를 열어줍니다. (hg-crescendo-server)
 
 ![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az14.png)
 
-3-2-5-2. intelliJ에서 터미널을 열고 아래의 명령어를 입력합니다.
+3-2-5-2. intelliJ에서 좌측 하단의 터미널을 열고 아래의 명령어를 입력합니다.
 
 ```
 git pull
 ```
 
-3-2-6. .github/workflows 폴더에 yml파일이 두개가 있습니다. 원래 있던 파일을 삭제합니다.
+3-2-6. .github/workflows 폴더에 yml파일이 두개가 있습니다. sh-crescendo-server를 삭제합니다.
+3-2-7-0. 새로 생긴 yml 파일의 아래 내용(앱서비스의 고유key)을 메모장에 복사해두고 '내용'만 모두 지웁니다. (파일은 지우시면 안됩니다)
 
-3-2-7. 새로 생긴 yml 파일에 내용을 다음과 같이 변경합니다. 복사 붙여넣기를 하셔도 괜찮습니다. 
+<img width="775" alt="스크린샷 2024-08-27 오전 9 04 12" src="https://github.com/user-attachments/assets/6a03c384-1a7f-4294-a41e-4b1c30231444">
+
+
+
+3-2-7. 새로 생긴 yml 파일에 내용을 다음(아래의 코드블럭)과 같이 변경합니다. (복사 붙여넣기 하세요.)
 
 단 ** 주의할 점
 
-1. 가장 아래에서 2번째에 app-name 은 당신의 웹앱 리소스 네임으로 변경하셔야합니다. 
-2. client-id, tanant-id, subscription-id는 자신이 발급받은 키를 쓰셔야 합니다. 이전 파일 지웠어도 깃허브 commit 기록 보면 찾을 수 있습니다.
+1. 가장 아래에서 2번째에 app-name 은 당신이 만든 앱서비스의 이름으로 변경하셔야합니다.
+2. client-id, tanant-id, subscription-id는 자신이 발급받은 키를 쓰셔야 합니다. 메모장에 복사해둔 client-id, tanant-id, subscription-id로 다시 바꿔줍니다.
 
 ```
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
