@@ -23,11 +23,11 @@ function Toggles() {
   );
 }
 
-function newPage() {
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
-  const [list, setList] = useState([]);
-}
+// function newPage() {
+//   const [title, setTitle] = useState("");
+//   const [content, setContent] = useState("");
+//   const [list, setList] = useState([]);
+// }
 
 function Board() {
   return (

@@ -32,7 +32,9 @@ function SignUp3({ formData }) {
       </header>
       <div>
         <button id="prevBtn" onClick={() => navigate(-1)} aria-label="Previous" />
-        <button id="startBtn" onClick={handleSubmit} aria-label="Start">시작하기</button>
+        <button id="startBtn"
+        onClick={() => navigate("/Main")}
+        aria-label="Start">시작하기</button>
         <button id="helpBtn" aria-label="Help" />
       </div>
     </div>

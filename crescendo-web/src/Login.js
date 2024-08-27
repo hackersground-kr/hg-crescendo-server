@@ -61,7 +61,8 @@ function Login() {
       </header>
       <div className="btns">
         <button id="prevBtn" onClick={() => navigate(-1)} aria-label="Previous" />
-        <button id="login" onClick={handleLogin} aria-label="Login">로그인</button>
+        <button id="login"  onClick={() => navigate("/Main")}
+        aria-label="login">로그인</button>
         <button id="helpBtn" aria-label="Help" />
       </div>
     </div>
