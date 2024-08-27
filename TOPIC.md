@@ -40,7 +40,7 @@
 ![summary](./images/sunflower.png)
 
 ## 제품 아키텍처 (이미지)
-<img width="553" alt="스크린샷 2024-08-27 오후 12 01 17" src="https://github.com/user-attachments/assets/50ffb35a-6157-446f-a35f-4bef4fa20937">
+https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/%E1%84%8B%E1%85%A1%E1%84%8F%E1%85%B5%E1%84%90%E1%85%A6%E1%86%A8%E1%84%8E%E1%85%A7.png
 
 
 
