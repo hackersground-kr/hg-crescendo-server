@@ -45,7 +45,7 @@
 
 
 ## 제품 소개 슬라이드
-[sunflower.zip](https://github.com/user-attachments/files/16755972/sunflower.zip)
+https://github.com/hackersground-kr/hg-crescendo-server/blob/main/decks/%E1%84%92%E1%85%A2%E1%84%87%E1%85%A1%E1%84%85%E1%85%A1%E1%84%80%E1%85%B5.pdf
 
 
 
