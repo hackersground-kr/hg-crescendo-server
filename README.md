@@ -204,9 +204,10 @@ winget install -e --id GitHub.cli
 
 ![image.png](https://github.com/hackersground-kr/hg-crescendo-server/blob/main/images/az3.png)
 
-2-2. 터미널 또는 파워셀에 아래 명령어를 입력합니다.
+2-2. 터미널 또는 파워셀에 아래 명령어를 차례로 입력합니다.
 
 ```
+cd ~
 git clone (복사한 url)
 ```
 
