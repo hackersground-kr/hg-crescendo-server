@@ -45,7 +45,7 @@
 
 
 ## 제품 소개 슬라이드
-![Uploading 스크린샷 2024-08-27 오전 11.59.49.png…]()
+[sunflower.zip](https://github.com/user-attachments/files/16755972/sunflower.zip)
 
 
 
