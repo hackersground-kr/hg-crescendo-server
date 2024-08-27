@@ -76,8 +76,8 @@ https://www.oracle.com/java/technologies/downloads/
 
 0-1-2. mac에서 자바 설치
 
-오라클 홈페이지에서 맥 os 자바 17을 설치한다.
-https://www.oracle.com/java/technologies/downloads/
+아래 링크로 다운받습니다
+https://download.oracle.com/java/17/latest/jdk-17_macos-aarch64_bin.dmg
 
 터미널에서 아래 명령어를 차례로 입력합니다.
 ```
