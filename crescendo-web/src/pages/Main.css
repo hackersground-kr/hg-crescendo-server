@@ -47,8 +47,13 @@ h5 {
 .plus {
   width: 80px;
   height: 80px;
-  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center center;
   background-image: url("../image/button.png");
   background-color: none;
 }
