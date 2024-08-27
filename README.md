@@ -107,7 +107,7 @@ export PATH
 
 다음 명령어를 입력하여 환경변수를 적용한다.
 ```
-source .bash_profile
+source ~/.bash_profile
 ```
 
 ```
